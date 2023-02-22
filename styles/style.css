@@ -1,0 +1,439 @@
+*{
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*This is for header*/
+header{
+    width: 100%;
+    height: 5vh;
+    background-color: #f9f9f8;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+   
+   
+}
+
+/*This is for header anchor tag*/
+
+
+header a{
+    text-decoration: none;
+    color: #848383;
+    margin-right: 3%;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+.header a:focus{
+    border-style: dashed !important;;
+    border-width: 1px !important;;
+}
+a:focus {
+    border-style: dashed;
+    border-width: 1px;
+}
+
+
+/*This is for Navbar*/
+
+
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+.navbar>.logo{
+    display: flex;
+    margin-left: 2%;
+    height: 60%;
+  
+    width: 30%;
+}
+
+
+.navbar>.logo>form{
+    margin-left: 2%;
+    height: 100%;
+    width: 80%;
+    display: flex;
+ 
+}
+
+
+.navbar>.logo>form>input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 2%;
+}
+.navbar>.logo>#logos{
+    cursor: pointer;
+}
+
+
+
+    /* Style the input placeholder */
+
+
+.navbar > .logo > form > input::placeholder {
+
+    color: #999;
+    padding-left: 10%;
+  }
+  #logos{
+    width: 10%;
+    height: 100%;
+  }
+  /* Style the search Button */
+
+#btn-search{
+    margin-left: 2%;
+    height: 100%;
+    width: 12%;
+    border: none;
+    background-color: #f0f0f0;
+}
+
+
+/* Style the search button image */
+
+
+#btn-search>img{
+    height: 50%;
+}
+
+/* Style the drop Down*/
+
+.dropdown {
+  
+    float: left;
+    overflow: hidden;
+    
+    display:flex;
+    justify-content: space-around;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    padding: 2.2%;
+}
+#person{
+    height: 50%;
+}
+  
+.dropdown .dropbtn {
+   
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+  }
+  
+  /*.navbar .dropdown:hover .dropbtn, .dropbtn:focus {
+   border-bottom: 4px solid #000;
+   }
+   */
+
+  .dropdown .dropbtn:focus {
+    border-style: dashed;
+    border-width: 1px;
+}
+
+ 
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 15%;
+    transform: translate(0);
+  
+
+   
+    transition: opacity 1.4s ease-out; /* opacity transition */
+}
+
+.show .dropdown-content {
+  
+    opacity: 1; /* show when .show class is added to parent */
+}
+  
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  /* Style the navBar side*/
+
+
+  .navbar>.side{
+    
+    width: 25%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+  }
+
+
+  /* Style the navBar side divs*/
+
+
+
+  .navbar>.side>div{
+    cursor: pointer;
+   
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    
+  }
+
+    /* Style the navBar side divs anchor tags*/
+
+
+  .navbar>.side>div>a{
+    
+    text-decoration: none;
+    margin-left: 1.2%;
+    font-size: large;
+    color: black;
+    font-size: 1rem;
+  }
+
+  .navbar>.side>.cart>img{
+     height: 60%;
+  }
+
+
+  .navbar>.side>.cart>a{
+    margin-left:1.2% ;
+  }
+
+
+  .navbar>.side>div:hover{
+    border-bottom: 4px solid #000;
+  }
+
+  /* Style the Container below navbar */
+
+  .container{
+    width: 100%;
+    height: 8vh;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-color:#e8e9e9 ;
+    border-bottom-color:#e8e9e9 ;
+    border-left:none ;
+    border-right:none ;
+  }
+  .container>button{
+    border: none;
+    background-color: transparent;
+    margin-left: 2%;
+    cursor: pointer;
+    outline: 0;
+    line-height: 40px;
+    color: #333;
+    font-size: 1rem;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    position: relative;
+    padding: 0;
+    text-decoration: none;
+
+  }
+  .container>button:active,button:focus{
+    border-bottom:5px solid black ;
+  }
+  #red{
+     color: #c63a64;
+  }
+  #redd{
+    color: #c63a64;
+  }
+  #dropdown-container {
+    display: none;
+    position: fixed;
+    top: 22vh;
+    left: 0;
+    width: 100vw;
+    height: 78vh;
+    background-color: white;
+    transition: top 0.5s ease-in-out;
+    z-index: 999;
+}
+#dropdown-container>div{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    
+}
+#dropdown-container>div>div{
+   
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#dropdown-container>div>#shop{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    height: 50%;
+}
+#dropdown-container>div>#shop>div{
+    padding: 10%;
+    text-align: center;
+    border: 1px solid #bbbbbb;
+}
+#dropdown-container>div>#shop>div>span{
+    text-align: center;
+    margin-top: 5%;
+    cursor: pointer;
+    
+}
+#dropdown-container>div>div>a{
+    color:black;
+    text-decoration: none;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+#dropdown-container>div>h4{
+    font-family:Roboto,Helvetica,Arial,sans-serif;
+
+}
+
+
+ /* Style the Link Section */
+
+.bar{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 15vh;
+    border-top:1px solid #e8e9e9 ;
+    border-bottom:1px solid #e8e9e9;
+    align-items: center;
+    cursor: pointer;
+}
+.bar>div{
+    display: flex;
+    padding-left: 1%;
+    border-top-color:#e8e9e9 ;
+    border: 1px solid #e8e9e9;
+    width: 23%;
+    height: 100%;
+    align-items: center;
+}
+.bar>div>#circles{
+   
+    width: 20%;
+    height: 50%;
+    margin-right: 1.3%;
+    background-color: #000;
+}
+.bar>.links:hover{
+    background-color: #f9f9f8;
+}
+.bar>div>#circles>img{
+    width: 100%;
+    height: 100%;
+}
+.bar>div>.circle{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+    border-radius: 50%;
+    width: 20%;
+    height: 50%;
+    margin-right: 1.3%;
+    background-color: #c63a64;
+    
+}
+.bar>div>.circles>img{
+    width: 50%;
+    height:50%;
+}
+.bar>div>.text>h3{
+   font-size: small;
+   font-weight:800 ;
+}
+.bar>div>.text>p{
+   font-size: small;
+    color: #565555;
+}
+
+.link2{
+    width: 100%;
+    height: 45vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    
+    
+    
+}
+
+.link2>.texts{
+    border: 1px solid red;
+    padding: 5%;
+    width: 30%;
+}
+.link2>.texts>h1{
+    text-align: center;
+}
+.link2>#flex{
+    width: 70%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+
+}
+/*Multi carousel*/
+
+#carousel1{
+    border: 1px solid red;
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+
+

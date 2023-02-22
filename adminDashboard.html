@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Side</title>
+    <link rel="stylesheet" href="./styles/adminDashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="./index.html"
+        ><img id="icon" src="./images/logoofwesite.jpg" alt=""
+      /></a>
+      <h3 id="nameofpages">Dashboard</h3>
+      <div id="admin">
+        <img src="./images/profile-svgrepo-com.svg" alt="" />
+      </div>
+    </nav>
+
+    <hr />
+    <div class="logoutsection">
+      <h5>Admin</h5>
+      <h5 id="logoutBtn">Log out</h5>
+    </div>
+    <div class="middlepart">
+      <div class="left">
+        <a href="./adminDashboard.html" class="dashboard">Dashboard</a>
+        <a href="./adminCustomers" class="Customers">Customers</a>
+        <a href="./adminTransation" class="Transation">Transation</a>
+        <a href="./adminProducts" class="Products">Products</a>
+      </div>
+
+      <div class="right">
+        <div class="rightone">
+          <div class="totalBalance">
+            <span>Balance Amount</span><br />
+            <span id="balancetotal">0</span>
+          </div>
+          <div class="totalSales">
+            <span>Total Sales</span><br />
+            <span id="salestotal">0</span>
+          </div>
+          <div class="totalusers">
+            <span>Total Users</span><br />
+            <span id="usertotal">0</span>
+          </div>
+        </div>
+        <div class="nextbetween">
+          <h2>Latest Orders</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>Order Number</td>
+                <td>Billing Name</td>
+                <td>Amount</td>
+                <td>Status</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let balancetotalEl = document.getElementById("balancetotal");
+  let salestotalEl = document.getElementById("salestotal");
+  let usertotalEl = document.getElementById("usertotal");
+  let adminEl = document.getElementById("admin");
+  let logoutsectionEl = document.querySelector(".logoutsection");
+  let logoutBtnEl = document.getElementById("logoutBtn");
+  //Events
+  window.addEventListener("load", () => {
+    // window.location.href = "./index.html";
+  });
+  logoutBtnEl.addEventListener("click", () => {
+    window.location.href = "./index.html";
+  });
+
+  adminEl.addEventListener("click", () => {
+    if (logoutsectionEl.style.display === "block") {
+      logoutsectionEl.style.display = "none";
+    } else {
+      logoutsectionEl.style.display = "block";
+    }
+  });
+
+  //fetch Data from orders.json and local storage with key "placedorders"
+  fetch(`/orders.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      let totalBalance = 0;
+      let countSales = 0;
+      //get data from local storage
+      let ordersData = JSON.parse(localStorage.getItem("placedorders")) || [];
+      //get users from local storage
+      let usersData = JSON.parse(localStorage.getItem("usersData")) || [];
+      for (let i = 0; i < data.length; i++) {
+        ordersData.push(data[i]);
+      }
+      for (let i = 0; i < ordersData.length; i++) {
+        if (ordersData[i].status === "delivered") {
+          totalBalance += ordersData[i].amount;
+          countSales++;
+        }
+      }
+      console.log(data);
+      //Display data to the recent orders
+      DisplayData(ordersData);
+      //Display total sales
+      balancetotalEl.innerText = totalBalance;
+      salestotalEl.innerText = countSales;
+      usertotalEl.innerText = usersData.length;
+    });
+  function DisplayData(arr) {
+    let content = ``;
+    for (let i = 0; i < arr.length; i++) {
+      content += createrow(arr[i]);
+    }
+    document.querySelector("tbody").innerHTML = content;
+  }
+  function createrow(el) {
+    return `<tr>
+                <td>${el.ordernumber}</td>
+                <td>${el.name}</td>
+                <td>${el.amount}</td>
+                <td>${el.status}</td>
+              </tr>`;
+  }
+</script>

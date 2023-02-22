@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <script src="/scripts/cart.js"></script>
+    <title>cart</title>
+</head>
+
+<body>
+    <header><a tabindex="0" href="#">Enable Accessiblity</a></header>
+
+    <!--This is for NavBar-->
+    <nav class="navbar">
+        <div class="logo">
+
+            <!--Logo-->
+
+            <img id="logos" src="./source/logo.png.jpeg" alt="logo">
+
+            <!--Search Bar-->
+            <form>
+                <input type="search" name="Search" id="search" placeholder="Search styles, brands & more">
+                <button id="btn-search" type="submit"><img
+                        src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/1x/external-magnifying-glass-interface-kiranshastry-solid-kiranshastry.png"
+                        alt=""></button>
+            </form>
+
+
+        </div>
+
+        <!--This is for DropDown-->
+
+        <div class="side">
+            <div class="dropdown">
+                <img id="person" src="https://img.icons8.com/ios-filled/1x/gender-neutral-user.png" alt="">
+                <button class="dropbtn" onclick="myFunction()">Sign In
+
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#">Sign In
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &#10097;</a>
+                    <a href="#">My Orders
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &#10097;</a>
+                    <a href="#">My Favourites
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                    <a href="#">My VIP Rewards &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                </div>
+            </div>
+            <div class="find">
+                <img src="https://img.icons8.com/material-rounded/1x/marker.png" alt="">
+                <a href="#">Find a store</a>
+            </div>
+            <div class="cart">
+                <img src="https://img.icons8.com/ios-glyphs/1x/shopping-bag.png" alt="error">
+                <a href="#">Bag</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--This is for container below navbar-->
+
+    <div class="container">
+        <button class="bt">Women</button>
+        <button class="bt">Men</button>
+        <button class="bt">Kids</button>
+        <button class="bt">Accessories & Clothings</button>
+        <button class="bt">Athletic and Sneakers</button>
+        <button class="bt">Brands</button>
+        <button class="bt" id="red">Clearance</button>
+        <button id="redd" class="bt">Deals</button>
+
+    </div>
+    <div id="dropdown-container">
+        <div>
+            <h4>Shoes</h4>
+            <div>
+                <a href="">All Women's Shoe</a>
+                <a href="">Athletic & Sneakers</a>
+                <a href="">
+                    Boots & Booties
+                </a>
+                <a href="">Casual Shoes</a>
+                <a href="">Clogs</a>
+                <a href="">Comfort Shoes</a>
+                <a href="">Dress Shoes</a>
+                <a href="">Espadrilles</a>
+                <a href="">Flats</a>
+                <a href="">Heels</a>
+                <a href="">Loafers</a>
+                <a href="">Mules</a>
+                <a href="">Sandals</a>
+                <a href="">Slippers</a>
+                <a href="">Wedges</a>
+            </div>
+        </div>
+        <div>
+            <h4>Sandals</h4>
+            <div>
+                <a href="">All Sandals</a>
+                <a href="">Casual Sandals</a>
+                <a href="">
+                    Dress Sandals
+                </a>
+                <a href="">Flat Sandals</a>
+                <a href="">Flip Flops</a>
+                <a href="">Gladiator Sandals</a>
+                <a href="">Natural Detail Sandals</a>
+                <a href="">Platform Sandals</a>
+                <a href="">Flats</a>
+                <a href="">Heels</a>
+                <a href="">Loafers</a>
+                <a href="">Mules</a>
+                <a href="">Sandals</a>
+                <a href="">Slippers</a>
+                <a href="">Wedges</a>
+
+            </div>
+        </div>
+        <div>
+            <h4>Clothing</h4>
+            <div>
+                <a href="">All Women's Clothing</a>
+                <a href="">Bottoms</a>
+                <a href="">Jackets</a>
+                <a href="">Sports Bras</a>
+                <a href="">Tops</a>
+                <h4>Designer & Luxury</h4>
+                <h4>Hiking & Trail</h4>
+                <h4>New Arrivals</h4>
+                <h4>Prom</h3>
+                    <h4>Wedding & Evening</h4>
+                    <h4>Work & Safety Shoes</h4>
+                    <h4>ImagineVintage</h4>
+                    <h4>Clearance</h4>
+            </div>
+        </div>
+        <div>
+            <h4>Shop by Shoe Size </h4>
+            <div id="shop">
+
+                <div>
+                    <span>4</span>
+
+                </div>
+                <div><span>4.5</span>
+                </div>
+                <div><span>5</span>
+                </div>
+                <div><span>5.5</span>
+                </div>
+                <div><span>6</span>
+                </div>
+                <div><span>6.5</span>
+                </div>
+                <div><span>7</span>
+                </div>
+                <div><span>7.5</span>
+                </div>
+                <div><span>8</span>
+                </div>
+                <div><span>8.5</span>
+                </div>
+                <div><span>9</span>
+                </div>
+                <div><span>9.5</span>
+                </div>
+                <div><span>10</span>
+                </div>
+                <div><span>10.5</span>
+                </div>
+                <div><span>11</span>
+                </div>
+                <div><span>11.5</span>
+                </div>
+                <div><span>12</span>
+                </div>
+                <div><span>13</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--This is for Link Section-->
+
+    <div class="bar">
+        <div id="firstLink" class="links">
+            <div id="circles">
+                <!--images inside Link Section-->
+                <img src="./source/logo.png.jpeg" alt="logo">
+            </div>
+            <div class="text">
+                <h3>BECOME A VIP & GET 20% OFF</h3>
+                <p>Plus, 5% back in Rewards % free shipping</p>
+            </div>
+
+
+        </div>
+        <div id="secondLink" class="links">
+            <div class="circle">
+
+                <!--images inside Link Section-->
+                <img src="https://img.icons8.com/emoji/1x/heavy-dollar-sign-emoji.png" alt="">
+            </div>
+            <div class="text">
+                <h3>25% OFF SELECT BIRKENSTOCK STYLES</h3>
+                <p>Prices as marked. Valid through 2/28</p>
+            </div>
+
+
+        </div>
+        <div class="links">
+            <div class="circle">
+                <!--images inside Link Section-->
+                <img src="https://img.icons8.com/ios-filled/1x/semi-truck-side-view.png" alt="">
+            </div>
+            <div class="text">
+                <h3>FREE SHIPPING FOR VIPSs</h3>
+                <p>Not a VIP?Get free shipping on orders of $75+</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="cont-1">
+        <div id="rth">
+            <a href="index.html" style="text-decoration: none; color:black">&lt; Back to Shopping</a>
+        </div>
+        <h1 style="margin: 20px 85px;">MY BAG</h1>
+        <div id="cart">
+            <div id="cart-2">
+                <i class="fa fa-shopping-bag" style="font-size:50px;margin:5px 175px;"></i>
+            </div>
+            <div id="e-bag">
+                <h3 style="text-align: center;margin-top:20px;">YOU HAVE NO ITEMS IN YOUR BAG</h3>
+            </div>
+            <div style="width:150px;height:3vh;margin:0px auto;text-align: center;color:black;"><a href="/index.html" style="color:black;margin-top:20px;">Start Shopping!</a></div>
+        </div>
+    </div>
+
+    <div id="need-help">
+        <div style="height:5vh;width:15%;margin-left:25px;">
+            <h2 style="margin:10px 0px 0px 0px;font-size:21px;">NEED HElP?</h2>
+        </div>
+        <div style="height:3vh;width:35%;margin-left:25px;display:flex;margin-top:10px;">
+            <div class="nh-boxes" style="width:40%"><a href="http://" style="font-size:14px;color:black;">RETURNS & EXCHANGES</a></div>
+            <div class="nh-boxes" style="width:27%;height:3vh;text-align: center;"><a href="http://" style="font-size:14px;color:black;"><i class="material-icons" style="font-size:18px;">chat</i>LIVE CHAT</a></div>
+            <div class="nh-boxes" style="width:27%;height:3vh;text-align: center;"><a href="http://" style="font-size:14px;color:black;">866.DSW.Shoes</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

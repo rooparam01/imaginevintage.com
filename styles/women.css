@@ -9,7 +9,6 @@
     display: flex;
     width: 80%;
     justify-content: space-around;
-    border: 1px solid rebeccapurple;
     margin-bottom: 30px;
 }
 #top>div{
@@ -25,10 +24,34 @@
     display: flex;
     width: 100%;
 }
+/* filters div */
 #filters{
    border: 1px solid #dededc; 
    width:23%;
+   padding: 0px 10px 10px 10px;
 }
+#filters>#brands-box>h3{
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+#filters>#price-radios>h3{
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+#filters .box{
+    padding: left 10px; 
+    font-size:large;
+    line-height: 50px;
+    display:flex;
+    align-items: center;
+}
+#filters .box input{
+    width: 20px;
+    height: 20px;
+}
+
+
+/* product-cont div */
 #product-cont{
     border: 1px solid #dededc;
     width: 77%;

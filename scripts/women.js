@@ -14,7 +14,7 @@ async function fetchData(url) {
     try {
         let res= await fetch(url);
         let arr=await res.json();
-        console.log(arr.data);
+        // console.log(arr.data);
         //products=arr.data;
         localStorage.setItem("dsw-product",JSON.stringify(arr.data));
     } catch (error) {
@@ -22,12 +22,16 @@ async function fetchData(url) {
     }
 }
 
+//only women's products-->
+let womens=products.filter((el)=>{
+  return el.category==='women'
+});
+console.log(womens);
 
-
-display(products);
+display(womens);
 
 function display(arr) {
-    
+    cardDiv.innerHTML="";
     let item=
     `<div id="cards">
        ${arr.map((el) => 
@@ -56,7 +60,7 @@ function createCard(image,title,category,brand,price) {
     return card;
 }
 
-//adding product into cart functionality
+//adding product into cart functionality-->
 let cartLS=JSON.parse(localStorage.getItem("dsw-cart"))||[];
 
 let addBtnArr=document.querySelectorAll(".addBtn");
@@ -74,7 +78,7 @@ for(let i=0;i<addBtnArr.length;i++){
     })
 }
 
-
+//checking duplicate products
 function checkDuplicate(el) {
     for(let i=0;i<cartLS.length;i++){
         if(cartLS[i].id===el.id){
@@ -83,3 +87,61 @@ function checkDuplicate(el) {
     }
     return false;
 }
+
+//filter and sorting product functionalities part-->
+//Using select tag-->
+let sortSelect=document.getElementById("sort");
+
+sortSelect.addEventListener("change",()=>{
+    let sortData=womens.sort((a,b)=>{
+       if(sortSelect.value==="Price Low To High"){
+        return a.price-b.price;
+       }else if(sortSelect.value==="Price High To Low"){
+        return b.price-a.price;
+       }
+    });
+    display(sortData);
+});
+
+//checkbox tags-->
+let checkboxArr=document.querySelectorAll('.check');  //<---checkbox variable array
+
+
+for(let i=0;i<checkboxArr.length;i++){
+    checkboxArr[i].addEventListener("click",()=>{
+        let brandFiltered=womens.filter((el)=>{
+            if(checkboxArr[i].checked==true){
+                //console.log(checkboxArr[i].value);
+                checkboxArr[i].brand
+                return checkboxArr[i].value==el.brand;
+            }
+        })
+        display(brandFiltered);
+        
+    });
+}
+
+//radio buttons tags-->
+let filterPrice=document.getElementsByName("price-radio");
+
+
+for(let i=0;i<filterPrice.length;i++){
+    filterPrice[i].addEventListener("click",()=>{
+       let filteredData=womens.filter((el)=>{
+          if(filterPrice[i].value==="lte-1000"){
+            return el.price<=1000;
+          }else if(filterPrice[i].value==="lte-2000"){
+            return el.price<=2000;
+          }else if(filterPrice[i].value==="lte-3000"){
+            return el.price<=3000;
+          }else if(filterPrice[i].value==="lte-4000"){
+            return el.price<=4000;
+          }else{
+            return el.price;
+          }
+       })
+       display(filteredData);
+    //console.log(filterPrice[i].value);
+    })
+}
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Side</title>
+    <link rel="stylesheet" href="./styles/adminCustomers.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#"><img id="icon" src="./images/logoofwesite.jpg" alt="" /></a>
+      <h3 id="nameofpages">Customers</h3>
+      <div id="admin">
+        <img src="./images/profile-svgrepo-com.svg" alt="" />
+      </div>
+    </nav>
+
+    <hr />
+    <div class="logoutsection">
+      <h5>Admin</h5>
+      <h5 id="logoutBtn">Log out</h5>
+    </div>
+    <div class="middlepart">
+      <div class="left">
+        <a href="./adminDashboard.html" class="dashboard">Dashboard</a>
+        <a href="./adminCustomers.html" class="Customers">Users</a>
+        <a href="./adminTransaction.html" class="Transation">Transation</a>
+        <a href="./adminProducts.html" class="Products">Products</a>
+      </div>
+
+      <div class="right">
+        <br />
+        <h2>Users</h2>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <td>Username</td>
+              <td>Email</td>
+              <td>Password</td>
+              <td>Role</td>
+              <td>Delete</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let adminEl = document.getElementById("admin");
+  let logoutsectionEl = document.querySelector(".logoutsection");
+  let logoutBtnEl = document.getElementById("logoutBtn");
+  //Events
+  window.addEventListener("load", () => {
+    // window.location.href = "./index.html";
+  });
+  logoutBtnEl.addEventListener("click", () => {
+    window.location.href = "./index.html";
+  });
+
+  adminEl.addEventListener("click", () => {
+    if (logoutsectionEl.style.display === "block") {
+      logoutsectionEl.style.display = "none";
+    } else {
+      logoutsectionEl.style.display = "block";
+    }
+  });
+
+  //fetch users Data from lS
+  let usersData = JSON.parse(localStorage.getItem("usersdata"));
+  console.log(usersData);
+  DisplayData(usersData);
+
+  function DisplayData(arr) {
+    let content = ``;
+    for (let i = 0; i < arr.length; i++) {
+      content += createrow(arr[i]);
+    }
+    document.querySelector("tbody").innerHTML = content;
+    let deleteBtn = document.querySelectorAll(".deletebtn");
+    for (let i = 0; i < deleteBtn.length; i++) {
+      deleteBtn[i].addEventListener("click", () => {
+        console.log(usersData[i], i);
+        let afterDelet = [];
+        for (let j = 0; j < arr.length; j++) {
+          if (i != j) {
+            afterDelet.push(arr[j]);
+          }
+        }
+        arr = afterDelet;
+        localStorage.setItem("usersdata", JSON.stringify(arr));
+        DisplayData(arr);
+      });
+    }
+  }
+  function createrow(el) {
+    return `<tr>
+                <td>${el.name}</td>
+                <td>${el.email}</td>
+                <td>${el.password}</td>
+                <td>${el.role}</td>
+                <td><button class="deletebtn">Delete</button></td>
+              </tr>`;
+  }
+</script>

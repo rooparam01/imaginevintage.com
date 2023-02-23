@@ -32,7 +32,7 @@
     <div class="middlepart">
       <div class="left">
         <a href="./adminDashboard.html" class="dashboard">Dashboard</a>
-        <a href="./adminCustomers" class="Customers">Customers</a>
+        <a href="./adminCustomers.html" class="Customers">Users</a>
         <a href="./adminTransation" class="Transation">Transation</a>
         <a href="./adminProducts" class="Products">Products</a>
       </div>
@@ -102,7 +102,7 @@
       //get data from local storage
       let ordersData = JSON.parse(localStorage.getItem("placedorders")) || [];
       //get users from local storage
-      let usersData = JSON.parse(localStorage.getItem("usersData")) || [];
+      let usersData = JSON.parse(localStorage.getItem("usersdata")) || [];
       for (let i = 0; i < data.length; i++) {
         ordersData.push(data[i]);
       }

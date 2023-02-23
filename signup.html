@@ -43,7 +43,7 @@
 </head>
 <body  background="https://images.dsw.com/is/image/DSWShoes/sign_in_bg?impolicy=qlt-medium-high&imwidth=1400&imdensity=1">
     <div class="main">
-        <form id="login-form">
+        <form >
    <h1>Sign Up</h1>
    <input type="text" id="name" minlength="4" placeholder="Name" required/>
        
@@ -145,4 +145,30 @@
 
     </div>
 </body>
+
+  <script>
+    let myform=document.querySelector("form");
+    let nameinput=document.getElementById("name");
+    let emailinput=document.getElementById("email");
+    let passwordinput=document.getElementById("password");
+       myform.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        let usersdatas=JSON.parse(localStorage.getItem("usersdata"))||[];
+      let data={
+        name:nameinput.value,
+        email:emailinput.value,
+        password:passwordinput.value
+      }
+      console.log(data)
+      usersdatas.push(data);
+      localStorage.setItem("usersdata",JSON.stringify(usersdatas));
+      window.location.href="./signin.html";
+       });
+       
+   
+   
+     
+    
+  </script>
+
 </html>

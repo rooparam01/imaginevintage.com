@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .first{
+            height: 240px;
+            width: 70%;
+           margin-left: 700px;
+            background-color: black;
+            margin-top: 100px;
+            padding: 35px;
+        }
+      .sec{
+            height: 350px;
+            width: 80%;
+           margin-left: 700px;
+            background-color: white;
+            
+      }
+      h2{
+        color: white;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 10px;
+        color: rgb(255, 255, 255)
+        
+      }
+     .first p{
+        color: white;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-top: 30px;
+      }
+     .first button{
+        width: 300px;
+        height: 50px;
+        margin-top: 30px;
+         border-radius: 7px;
+        font-family: futura-pt, Helvetica, Arial, sans-serif;
+        font-weight: 1000;
+        height: 50px;
+      }
+      .sec{
+        padding:35px;
+        height: 300px;
+      }
+      input{
+        height: 40px;
+        width: 500px;
+        border: 1px solid #BDBDBD;
+        padding-left: 20px;
+      }
+      .sec button{
+        width: 200px;
+        height: 50px;
+        margin-top: 20px;
+         border-radius: 7px;
+        font-family: futura-pt, Helvetica, Arial, sans-serif;
+        font-weight: 1000;
+        height: 50px;
+        background-color: black;
+        color: white;
+      }
+     
+    </style>
+</head>
+<body background="https://images.dsw.com/is/image/DSWShoes/sign_in_bg?impolicy=qlt-medium-high&imwidth=1400&imdensity=1">
+    <div class="first">
+        <h2>NOT A VIP MEMBER YET?</h2>
+        
+        <h2>ALREADY SIGNED UP AT A STORE?</h2>
+        <p>Become a VIP, and get 20% off, plus free shipping on anything, 5% back in Rewards, and so<br> much more</p>
+        <button onclick="window.location.href='./signup.html'">Register Here</button>
+    </div>
+    <div class="sec">
+      <form id="login-form">
+     <h1>SIGN IN</h1>
+     <input type="text" id="email" name="username" placeholder="Email" required /><br><br>
+     <input type="password" id="password" name="password"placeholder="password" required />
+     <p>Forgot Password?</p>
+     
+     <button>SIGN IN</button>
+    </form>
+    </div>
+</body>
+<script>
+  
+  let emailinput=document.getElementById("email");
+  let passwordinput=document.getElementById("password");
+  let myallform=document.querySelector("form");
+  
+  
+  let mystoredata=JSON.parse(localStorage.getItem("usersdata"));
+  myallform.addEventListener("submit",(event)=>{
+    console.log("working")
+    event.preventDefault();
+    
+    
+     let  email=emailinput.value;
+     let password=passwordinput.value;
+    if(email=="admin"&&password=="admin"){
+      window.location.href="./adminDashboard.html";
+    }else{
+        chakedata(email,password,mystoredata);
+    }
+  
+   
+  });
+
+  
+  function chakedata(email,password,mystoredata){
+    let count=0;
+   for (let a=0;a<mystoredata.length;a++){
+    if(email==mystoredata[a].email && password==mystoredata[a].password){
+      count++;
+      localStorage.setItem("userAuthenticationName",(email));
+      window.location.href="./index.html";
+    }
+    
+  }
+ if(count==0){
+  alert ("Wrong username or password");
+ }  
+}
+ 
+</script>
+</html>

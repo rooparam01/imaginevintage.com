@@ -1,0 +1,96 @@
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#nameofpages {
+  margin: auto;
+  cursor: pointer;
+}
+#icon {
+  width: 70px;
+  display: flex;
+  align-items: center;
+}
+.logoutsection {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  padding: 30px;
+  float: right;
+  position: relative;
+  display: none;
+  z-index: 1;
+}
+#logoutBtn {
+  color: green;
+  cursor: pointer;
+}
+hr {
+  border: 1px solid rgb(239, 236, 236);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#admin {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#admin img {
+  width: 30px;
+}
+.middlepart {
+  display: flex;
+  position: absolute;
+  z-index: 0.1;
+}
+.left > a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+.left {
+  margin-top: 30px;
+  padding: 50px;
+  line-height: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.left > .Customers {
+  color: white;
+}
+.left > a {
+  padding: 20px;
+}
+.left > a:hover {
+  transition: 500ms;
+  background-color: black;
+  color: white;
+}
+.Customers {
+  background-color: black;
+}
+thead > tr > td {
+  text-align: center;
+  color: #fff;
+  background-color: black;
+  width: 230px;
+}
+tbody > tr {
+  text-align: center;
+  font-size: 12px;
+}
+.right {
+  margin: 20px;
+}
+.deletebtn {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  color: red;
+}

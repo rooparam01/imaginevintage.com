@@ -1,10 +1,12 @@
-*{
-    font-family: Roboto,Helvetica,Arial,sans-serif;
-}
+
+
+
 body{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    overflow-x:hidden;
 }
 /*This is for header*/
 header{
@@ -403,8 +405,7 @@ a:focus {
 
 .link2{
     width: 100%;
-    height: 45vh;
-    border: 1px solid black;
+    height: 35vh;
     display: flex;
     justify-content: space-around;
     
@@ -413,7 +414,6 @@ a:focus {
 }
 
 .link2>.texts{
-    border: 1px solid red;
     padding: 5%;
     width: 30%;
 }
@@ -422,18 +422,242 @@ a:focus {
 }
 .link2>#flex{
     width: 70%;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
 
 }
 /*Multi carousel*/
-
-#carousel1{
-    border: 1px solid red;
-    height: 80%;
+.link2>.te{
+    height: 100%;
+    width: 50%;
+  }
+  .link2>.te>#carousel1{
+    height: 70%;
     width: 100%;
+   overflow: hidden;
+   position: relative;
+  }
+  #carousel1>span{
+    position: absolute;
+    top: 40%;
+    font-size: 1.4rem;
+    left: .5%;
+    z-index: 1;
+    background-color: #000;
+    opacity: 0.8;
+    color: white;
+    height: 25%;
+    width: 5%;
+    text-align: center;
     display: flex;
-}
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  #carousel1>span:nth-of-type(2){
+    cursor: pointer;
+    left: 94%;
+    text-align: right;
+    background-color: #000;
+    opacity: 0.8;
+    color: white;
+    height: 25%;
+    width: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #carousel1>section{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    overflow-x: auto;
+    margin: 1.2% auto 0 1.2%;
+  }
+  section>div{
+    min-width: 20%;
+    height: 80%;
+    
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+  
+  }
+  section>div>img{
+    margin-top: 10%;
+    width: 85%;
+    height: 80%;
+    margin-left: 2%;
+   }
+   section>div>p{
+    font-size: smaller;
+    color: #aaaaaa;
+   }
+   section>div>a{
+    text-decoration: none;
+    color: #000;
+   }
+  #carousel1 img.move-left {
+    left: -40px;
+  }
+  
+  #carousel1 img.move-right {
+    right: -140px;
+  }
+  section::-webkit-scrollbar{
+    visibility: hidden;
+  }
+
+  /*BirkenStock image*/
+
+
+  .birk {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .birk img {
+    display: block;
+    width: 100%;
+    
+  }
+  
+  .birk-text {
+   
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align:right;
+  }
+  .birk-text>h1{
+    font-size: 3rem;
+    padding: 1%;
+    white-space: nowrap;
+  }
+  .birk-text>p{
+    white-space: nowrap;
+    padding: 2%;
+  }
+  .birk-text>a{
+    margin-right: 5%;
+    display:inline-block ;
+    padding: 2%;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    border: #000;
+    background-color: #000;
+    width: 20%;
+    height: 3%;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .birk:hover{
+    border: 1px dashed black;
+  }
+
+   /*Women Section */
+
+
+  .womenSec{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 54vh;
+    text-align: center;
+  }
+  .cards{
+    margin-left: 1.5%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    text-align: left;
+    
+  }
+  .cards img{
+    width: 80%;
+  }
+  .cards>a{
+    text-decoration: none;
+    color: black;
+  }
+  .cards h3{
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+  .cards p{
+    font-weight: 800;
+    text-decoration: underline;
+  }
+
+            /*Women Section*/
+ .hotSec{
+  margin-top: 2%;
+  width: 100%;
+  height: 40vh;
+ }
+ .hotSec>.header{
+  text-align: center;
+  
+ }
+ .hotSec>.header>h1{
+  display: inline-block;
+  margin-right: 1.2%;
+ }
+ .hotSec>.header>a{
+  display: inline-block;
+  color: black;
+  font-size:1.2rem ;
+  font-weight: 700;
+
+ }
+
+     /*Best Brands Section*/
+
+ .betterPrice{
+  padding: 1.2%;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .betterPrice>.tags{
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .betterPrice>.brandImages{
+  height: 60%;
+  margin-right: 1%;
+  background-color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+ 
+ 
+ }
+ .brandImages>img{
+  height: 80%;
+  background-color: #ddd;
+  width: 15%;
+ 
+ }
+ .brandImages>img:hover{
+
+  border: 1px dashed black;
+  border-top: none;
+  border-bottom: none;
+ }
+
+
+
 
 

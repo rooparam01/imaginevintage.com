@@ -35,6 +35,54 @@
         <!-- filters div -->
         <div id="filters">
              <h2>FILTERS</h2>
+             <div id="brands-box">
+                <h3><u>Brand</u></h3>
+                <div class="box">
+                    <input type="checkbox" class="check"  value="blackberrys">
+                    <label for="checkbox">blackberrys</label>
+                </div>
+                <div class="box">
+                    <input type="checkbox" class="check" 
+                    value="allen-solly">
+                    <label for="checkbox">allen-solly</label>
+                </div>
+                <div class="box">
+                    <input type="checkbox" class="check"
+                    value="van-heusen">
+                    <label for="checkbox">van-heusen</label>
+                </div>
+                <div class="box">
+                    <input type="checkbox" class="check"
+                    value="twills">
+                <label for="checkbox">twills</label>
+                </div>
+             </div>
+             <hr>
+             <div id="price-radios">
+                <h3><u>Price</u></h3>
+                <div class="box">
+                    <input type="radio" name="price-radio" id="all" value="All price">
+                    <label for="radio">All Price</label>
+                </div>
+                <div class="box">
+                    <input type="radio" name="price-radio" id="lte-1000"
+                    value="lte-1000">
+                    <label for="radio">less than = $1000</label>
+                </div>
+                <div class="box">
+                    <input type="radio" name="price-radio" id="lte-2000" value="lte-2000">
+                    <label for="radio">less than = $2000</label>
+                </div>
+                <div class="box">
+                    <input type="radio" name="price-radio" id="lte-3000" value="lte-3000">
+                    <label for="radio">less than = $3000</label>
+                </div>
+                <div class="box">
+                    <input type="radio" name="price-radio" id="lte-4000" value="lte-4000">
+                    <label for="radio">less than = $4000</label>
+                </div>
+                <hr>
+             </div>
         </div>
         <!-- products div -->
         <div id="product-cont">
@@ -42,7 +90,7 @@
             <div id="head">
               <h2>WOMEN'S PRODUCTS</h2>
               <select name="sort" id="sort">
-                <option value="SORT :  Featured"> SORT:Featured</option>
+                <option value="SORT:Featured"> SORT:Featured</option>
                 <option value="Price Low To High">Price Low To High</option>
                 <option value="Price High To Low">Price High To Low</option>
               </select>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Side</title>
+    <link rel="stylesheet" href="./styles/adminProducts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#"><img id="icon" src="./images/logoofwesite.jpg" alt="" /></a>
+      <h3 id="nameofpages">Products</h3>
+      <div id="admin">
+        <img src="./images/profile-svgrepo-com.svg" alt="" />
+      </div>
+    </nav>
+
+    <hr />
+    <div class="logoutsection">
+      <h5>Admin</h5>
+      <h5 id="logoutBtn">Log out</h5>
+    </div>
+    <div class="middlepart">
+      <div class="left">
+        <a href="./adminDashboard.html" class="dashboard">Dashboard</a>
+        <a href="./adminCustomers.html" class="Customers">Users</a>
+        <a href="./adminTransaction.html" class="Transation">Transation</a>
+        <a href="./adminProducts.html" class="Products">Products</a>
+      </div>
+
+      <div class="right">
+        <div class="formdiv">
+          <h4>Product Add to Shopping List</h4>
+          <!-- brand,category,id,image,price,title -->
+          <form action="">
+            <label for="brand">Brand</label> <br />
+            <select name="brand" id="brand" required>
+              <option value="">Please Select the brand</option>
+              <option value="roadster">roadster</option>
+              <option value="blackberrys">blackberrys</option>
+              <option value="van-heusen">van-heusen</option>
+              <option value="allen-solly">allen-solly</option>
+              <option value="twills">twills</option></select
+            ><br />
+            <label for="category">Category</label> <br />
+            <select name="category" id="category" required>
+              <option value="">Please Select category</option>
+              <option value="men">men</option>
+              <option value="women">women</option></select
+            ><br />
+            <label for="image">Image Link</label> <br />
+            <input id="image" type="text" required /><br />
+            <label for="price">Price</label> <br />
+            <input id="price" type="number" required /><br />
+            <label for="title">Title</label> <br />
+            <input id="title" type="text" required /><br />
+            <button type="submit" id="submitbtn">Submit</button>
+          </form>
+        </div>
+        <div class="appendproducts">
+          <table>
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Title</td>
+                <td>Category</td>
+                <td>Price</td>
+                <td>Delete</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let adminEl = document.getElementById("admin");
+  let logoutsectionEl = document.querySelector(".logoutsection");
+  let logoutBtnEl = document.getElementById("logoutBtn");
+  let formEl = document.querySelector("form");
+  let brandEl = document.getElementById("brand");
+  let categoryEl = document.getElementById("category");
+  let imageEl = document.getElementById("image");
+  let priceEl = document.getElementById("price");
+  let titleEl = document.getElementById("title");
+
+  formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let ProductsData = JSON.parse(localStorage.getItem("dsw-product")) || [];
+    let id = ProductsData.length + 1;
+    let brand = brandEl.value;
+    let category = categoryEl.value;
+    let image = imageEl.value;
+    let price = priceEl.value;
+    let title = titleEl.value;
+    let obj = {
+      id: id,
+      brand: brand,
+      category: category,
+      image: image,
+      price: price,
+      title: title,
+    };
+    ProductsData.push(obj);
+    localStorage.setItem("dsw-product", JSON.stringify(ProductsData));
+    alert("Product Added to the Shopping List");
+    window.location.reload();
+  });
+  //Events
+  window.addEventListener("load", () => {
+    // window.location.href = "./index.html";
+  });
+  logoutBtnEl.addEventListener("click", () => {
+    window.location.href = "./index.html";
+  });
+
+  adminEl.addEventListener("click", () => {
+    if (logoutsectionEl.style.display === "block") {
+      logoutsectionEl.style.display = "none";
+    } else {
+      logoutsectionEl.style.display = "block";
+    }
+  });
+
+  //fetch Products Data from lS
+  let ProductsDatas = JSON.parse(localStorage.getItem("dsw-product")) || [];
+
+  DisplayData(ProductsDatas);
+
+  function DisplayData(arr) {
+    let content = ``;
+    for (let i = 0; i < arr.length; i++) {
+      content += createrow(arr[i]);
+    }
+    document.querySelector("tbody").innerHTML = content;
+    let deleteBtn = document.querySelectorAll(".deletebtn");
+    for (let i = 0; i < deleteBtn.length; i++) {
+      deleteBtn[i].addEventListener("click", () => {
+        // console.log(usersData[i], i);
+        let afterDelet = [];
+        for (let j = 0; j < arr.length; j++) {
+          if (i != j) {
+            afterDelet.push(arr[j]);
+          }
+        }
+        arr = afterDelet;
+        localStorage.setItem("dsw-product", JSON.stringify(arr));
+        DisplayData(arr);
+      });
+    }
+  }
+  function createrow(el) {
+    return `<tr>
+                <td>${el.id}</td>
+                <td>${el.title}</td>
+                <td>${el.category}</td>
+                <td>${el.price}</td>
+                <td><button class="deletebtn">Delete</button></td>
+              </tr>`;
+  }
+</script>

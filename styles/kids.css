@@ -1,0 +1,105 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* nav bar css */
+
+/* top div css */
+#top{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+#top>div{
+    width: 20%;
+    text-align: center;
+}
+#top>div>img{
+    width: 100%;
+}
+
+/* mid container div */
+#container{
+    display: flex;
+    width: 100%;
+}
+/* filters div */
+#filters{
+   border: 1px solid #dededc; 
+   width:23%;
+   padding: 0px 10px 10px 10px;
+}
+#filters>#brands-box>h3{
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+#filters>#price-radios>h3{
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+#filters .box{
+    padding: left 10px; 
+    font-size:large;
+    line-height: 50px;
+    display:flex;
+    align-items: center;
+}
+#filters .box input{
+    width: 20px;
+    height: 20px;
+}
+
+
+/* product-cont div */
+#product-cont{
+    border: 1px solid #dededc;
+    width: 77%;
+}
+#head{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+#head>h2{
+    margin-left: 20px;
+}
+#head>#sort{
+    padding: 0px 20px 0px 20px;
+    margin: 15px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/* cards div */
+#cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+.card{
+    padding: 10px;
+    border-radius: 7px;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card>img{
+    width: 100%;
+}
+.card>.addBtn{
+    display: block;
+    margin: auto;
+    padding: 8px 15px 8px 15px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #dededc;
+}
+.card>.addBtn:hover{
+    background-color: black;
+    color: white;
+    transition-delay: 10ms;
+}
+

@@ -2,15 +2,17 @@
 
 
 body{
+    
     margin:0;
     padding:0;
     box-sizing: border-box;
     font-family: Roboto,Helvetica,Arial,sans-serif;
     overflow-x:hidden;
+   
 }
 /*This is for header*/
 header{
-    width: 100%;
+    width: 100vw;
     height: 5vh;
     background-color: #f9f9f8;
     display: flex;
@@ -44,7 +46,7 @@ a:focus {
 
 
 .navbar{
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     display: flex;
     align-items: center;
@@ -255,7 +257,7 @@ a:focus {
   /* Style the Container below navbar */
 
   .container{
-    width: 100%;
+    width: 100vw;
     height: 8vh;
     border: 1px solid red;
     display: flex;
@@ -348,7 +350,7 @@ a:focus {
 .bar{
     display: flex;
     justify-content: flex-start;
-    width: 100%;
+    width: 100vw;
     height: 15vh;
     border-top:1px solid #e8e9e9 ;
     border-bottom:1px solid #e8e9e9;
@@ -567,7 +569,7 @@ a:focus {
   .womenSec{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: 54vh;
     text-align: center;
   }
@@ -598,10 +600,13 @@ a:focus {
             /*Women Section*/
  .hotSec{
   margin-top: 2%;
-  width: 100%;
-  height: 40vh;
+  width: 100vw;
+  background-color: #f9f9f8;
+  height: 70vh;
  }
  .hotSec>.header{
+  width: 100vw;
+  height: 20%;
   text-align: center;
   
  }
@@ -616,12 +621,44 @@ a:focus {
   font-weight: 700;
 
  }
+ .hotSec>.imageSection{
+  width: 100vw;
+  height: 80%;
+ }
+ .hotSec>.imageSection>section{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+}
+ .hotSec>.imageSection>section>div{
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  
+ }
+ .hotSec>.imageSection>section>div>img{
+  width: 80%;
+  height:50%;
+ }
+ .hotSec>.imageSection>section>div>button{
+  visibility: hidden;
+  width: 50%;
+  height: 10%;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+ }
+ .hotSec>.imageSection>section>div:hover>button{
+  visibility: visible;
+  cursor: pointer;
+ }
 
      /*Best Brands Section*/
 
  .betterPrice{
   padding: 1.2%;
-  width: 100%;
+  width: 100vw;
   height: 40vh;
   display: flex;
   justify-content: center;
@@ -659,5 +696,124 @@ a:focus {
 
 
 
+/*FOOTER*/
 
+.footer{
+  padding-left: 1.2%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9f9f8;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
 
+.footer>div>div{
+ 
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-content:space-around ;
+  flex-direction: column;
+}
+.footer>div>div>a{
+  text-decoration: none;
+  color: black;
+}
+.footer>div>#f{
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-content:space-around ;
+  flex-direction: column;
+}
+.fa-facebook {
+  background: transparent;
+  color: white;
+}
+.fa-twitter {
+  background: transparent;
+  color: white;
+}
+.fa-instagram {
+  background: transparent;
+  color: white;
+}
+.fa-pinterest {
+  background: transparent;
+  color: white;
+}
+.fa-youtube {
+  background: transparent;
+  color: white;
+}
+#social{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  width: 50%;
+  margin: auto;
+}
+#social>.fa {
+  
+  font-size: 2rem;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  
+}
+.footer>div>#e{
+  height: 30%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+
+  margin-left: 1.2%;
+  flex-direction: column;
+}
+
+.footer>#last>#social{
+  height: 10%;
+  
+}
+.footer>div>#e>form{
+  display: flex;
+  height: 20%;
+  
+
+ 
+}
+.footer>div>#e>form>input{
+  border-color: black;
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.footer>div>#e>form>#sub{
+  border-color: black;
+  width: 15%;
+  height: 112%;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  font-weight: 700;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+footer{
+  border-top: 1px solid red;
+  border-top-color: gray;
+  height: 10vh;
+  width: 100vw;
+  padding: 1.5%;
+  background-color: #f9f9f8;
+}
+footer>div>a{
+  text-decoration: none;
+  color: gray;
+  margin-left: 1.2%;
+  font-size: .8rem;
+}

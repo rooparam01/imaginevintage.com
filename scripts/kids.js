@@ -22,13 +22,13 @@ async function fetchData(url) {
     }
 }
 
-//only women's products-->
-let womens=products.filter((el)=>{
-  return el.category==='women'
+//only kid's products-->
+let kids=products.filter((el)=>{
+  return el.category==='kids'
 });
-console.log(womens);
+console.log(kids);
 
-display(womens);
+display(kids);
 
 function display(arr) {
     cardDiv.innerHTML="";
@@ -93,7 +93,7 @@ function checkDuplicate(el) {
 let sortSelect=document.getElementById("sort");
 
 sortSelect.addEventListener("change",()=>{
-    let sortData=womens.sort((a,b)=>{
+    let sortData=kids.sort((a,b)=>{
        if(sortSelect.value==="Price Low To High"){
         return a.price-b.price;
        }else if(sortSelect.value==="Price High To Low"){
@@ -126,7 +126,7 @@ for(let i=0;i<checkboxArr.length;i++){
             //console.log(brandArr);
         }
 
-        filterByBrand=womens.filter((element)=> brandArr.includes(element.brand));    
+        filterByBrand=kids.filter((element)=> brandArr.includes(element.brand));    
         
         //console.log('filterdata',filterByBrand);    
 
@@ -142,7 +142,7 @@ for(let i=0;i<filterPrice.length;i++){
     filterPrice[i].addEventListener("click",()=>{
        if(filterByBrand.length==0){
         //console.log('empty')
-        let filteredData=womens.filter((el)=>{
+        let filteredData=kids.filter((el)=>{
             if(filterPrice[i].value==="lte-1000"){
               return el.price<=1000;
             }else if(filterPrice[i].value==="lte-2000"){

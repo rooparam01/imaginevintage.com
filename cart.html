@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/cart.css">
-    <script src="/scripts/cart.js"></script>
+    <link rel="stylesheet" href="./styles/cart.css">
+
     <title>cart</title>
 </head>
 
@@ -238,7 +238,20 @@
         <div id="rth">
             <a href="index.html" style="text-decoration: none; color:black">&lt; Back to Shopping</a>
         </div>
-        <h1 style="margin: 20px 85px;">MY BAG</h1>
+        <h1 style="margin: 20px 85px;">MY BAG  <span style="font-size:23px;" id="item-count">0</span>  <span style="font-size:25px">Items</span></h1>
+        <div id="card-cont">
+                    
+                
+                <!-- <div class="truck">
+                    <i class="fa fa-truck" style="font-size:30px;margin:12px 20px"></i>
+                    <h5 style="margin-top:10px;">Standard Shipping<br><span style="color:green">Arrives in 4-7 Buisness
+                            Days</span></h5>
+                </div> -->
+           
+        </div>
+
+
+
         <div id="cart">
             <div id="cart-2">
                 <i class="fa fa-shopping-bag" style="font-size:50px;margin:5px 175px;"></i>
@@ -246,20 +259,26 @@
             <div id="e-bag">
                 <h3 style="text-align: center;margin-top:20px;">YOU HAVE NO ITEMS IN YOUR BAG</h3>
             </div>
-            <div style="width:150px;height:3vh;margin:0px auto;text-align: center;color:black;"><a href="/index.html" style="color:black;margin-top:20px;">Start Shopping!</a></div>
+            <div style="width:150px;height:3vh;margin:0px auto;text-align: center;color:black;"><a href="/index.html"
+                    style="color:black;margin-top:20px;">Start Shopping!</a></div>
         </div>
     </div>
 
-    <div id="need-help">
+    <div id="need-help" style="display:none;">
         <div style="height:5vh;width:15%;margin-left:25px;">
             <h2 style="margin:10px 0px 0px 0px;font-size:21px;">NEED HElP?</h2>
         </div>
         <div style="height:3vh;width:35%;margin-left:25px;display:flex;margin-top:10px;">
-            <div class="nh-boxes" style="width:40%"><a href="http://" style="font-size:14px;color:black;">RETURNS & EXCHANGES</a></div>
-            <div class="nh-boxes" style="width:27%;height:3vh;text-align: center;"><a href="http://" style="font-size:14px;color:black;"><i class="material-icons" style="font-size:18px;">chat</i>LIVE CHAT</a></div>
-            <div class="nh-boxes" style="width:27%;height:3vh;text-align: center;"><a href="http://" style="font-size:14px;color:black;">866.DSW.Shoes</a></div>
+            <div class="nh-boxes" style="width:40%"><a href="http://" style="font-size:14px;color:black;">RETURNS &
+                    EXCHANGES</a></div>
+            <div class="nh-boxes" style="width:27%;height:3vh;text-align: center;"><a href="http://"
+                    style="font-size:14px;color:black;"><i class="material-icons" style="font-size:18px;">chat</i>LIVE
+                    CHAT</a></div>
+            <div class="nh-boxes" style="width:27%;height:3vh;text-align: center;"><a href="http://"
+                    style="font-size:14px;color:black;">866.DSW.Shoes</a></div>
         </div>
     </div>
 </body>
+<script src="./scripts/cart.js"></script>
 
 </html>

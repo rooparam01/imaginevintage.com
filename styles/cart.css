@@ -480,7 +480,7 @@ button:focus {
 }
 
 #cont-1 {
-    height: 70vh;
+    /* height: 70vh; */
     width: 100%;
     background-color: #ddd3d376;
     padding-top:20px;
@@ -501,6 +501,7 @@ button:focus {
     height: 26vh;
     background-color: white;
     padding-top: 46px;
+    display:none;
 }
 
 #cart-2 {
@@ -529,10 +530,73 @@ border:2px solid red;
     justify-content: space-between;
 }
 .nh-boxes{
-    /* width:33%; */
     height:100%;
     margin-left:8px;
 }
 .nh-boxes:hover{
     border:2px solid red;
 }
+
+#card-cont {
+    margin: -50px 85px;
+    width: 60%;
+    /* background-color: white; */
+    padding-top: 46px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-image{
+    height: 23vh;
+    width: 25%;
+    margin: 0px 0px 0px 0px;
+}
+
+.cartdiv{
+    height: 27vh;
+    width: 100%;
+    margin: 15px 0px 0px 0px;
+    display:flex;
+    background-color: white;
+    /* border:1px solid red */
+    
+}
+
+.truck{
+    height:7vh;
+    width:30%;
+    margin-top:12px;
+    display:flex;
+    justify-content: space-between;
+}
+.item-des{
+    height: 23vh;
+    width: 25%;
+    margin: 0px 0px 0px 0px;
+    margin-left:30px;
+}
+
+.btns{
+    height:4vh;
+    width:150px;
+    margin:10px 0px 0px 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns>:nth-child(1){
+   width:35px;
+   font-size:18px;
+   background-color: rgb(241, 241, 241);
+}
+.btns>button{
+border-radius: 5px;
+font-weight: 600;
+}
+
+.btns>button:hover{
+    color:white;
+    background-color:teal;
+    border:2px solid red;
+ }

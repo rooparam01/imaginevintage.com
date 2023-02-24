@@ -59,8 +59,9 @@ secondLink.addEventListener("click",()=>{
     location.href = "#"
 }) 
 const url = "https://api.escuelajs.co/api/v1/users"
-let usersData = JSON.parse(localStorage.getItem("usersData"))||[]
-fetch(url)
+let usersData = JSON.parse(localStorage.getItem("usersdata"))||[]
+if(usersData.length<5){
+  fetch(url)
 .then((res)=>res.json())
 .then((data)=>{
     data.forEach((el)=>{
@@ -76,6 +77,9 @@ fetch(url)
        localStorage.setItem("usersdata",JSON.stringify(usersData))
     })
 })
+
+
+}
 
 let birk =  document.querySelector(".birk")
 birk.addEventListener("click",()=>{
@@ -115,3 +119,61 @@ span1.onclick=()=>{
     if(l<0){l=0}
   }
 }
+
+//Load Products
+
+let Rohit="https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products";
+let products=JSON.parse(localStorage.getItem("dsw-product"))||[];
+if(products.length<20){
+  fetchData(Rohit);
+}
+
+async function fetchData(url) {
+    try {
+        let res= await fetch(url);
+        let arr=await res.json();
+        // console.log(arr.data);
+        //products=arr.data;
+        localStorage.setItem("dsw-product",JSON.stringify(arr.data));
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+//for linking imageSection to cart
+let imageSec = document.querySelectorAll(".imageSection>section>div> button")
+console.log(imageSec)
+imageSec.forEach((button)=>{
+ button.addEventListener("click",()=>{
+    location.href="./cart.html"
+  })
+})
+
+//Login and Logout Button
+
+let emailName = localStorage.getItem("userAuthenticationName");
+let login  =document.getElementById("roopa")
+let logOut = document.getElementById("logout")
+
+let displayName = document.getElementById("l")
+
+if(emailName!=""){
+  displayName.innerText = emailName
+  logOut.style.display="block"
+  login.style.display ="none"
+}else{
+  login.style.display ="block"
+  logOut.style.display="none"
+}
+logOut.addEventListener("click",()=>{
+  
+  let userAuthenticationName =""
+  localStorage.setItem("userAuthenticationName",userAuthenticationName)
+  window.location.reload()
+})
+
+
+
+  
+

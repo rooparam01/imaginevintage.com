@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <!--This is for fontAwesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Bootstrap-->
+    
   
     
     
@@ -40,15 +40,16 @@
         <div class="side">
             <div class="dropdown">
                <img id="person" src="https://img.icons8.com/ios-filled/1x/gender-neutral-user.png" alt="">
-                <button class="dropbtn" onclick="myFunction()">Sign In
+                <button id="l" class="dropbtn" onclick="myFunction()">Sign In
                     
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content" id="myDropdown">
-                  <a href="./signup.html">Sign In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a id="roopa" href="./signin.html">Sign In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
                   <a href="./cart.html">My Orders &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
                   <a href="#">My Favourites &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
                   <a href="#">My VIP Rewards &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a id="logout" href="#">Log-Out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
                 </div>
                 </div>
                 <div class="find">
@@ -279,7 +280,7 @@
            <a href="./women.html"><img src="https://images.dsw.com/is/image/DSWShoes/P221473_funnel_under40?impolicy=qlt-medium&imwidth=1011&imdensity=1" alt="card"><h3>Sandals Under $40</h3><p>Shop Now</p></a>
            <a href="./women.html"><img src="https://images.dsw.com/is/image/DSWShoes/P221473_funnel_under60?impolicy=qlt-medium&imwidth=1011&imdensity=1" alt="card"><h3>Heels Under $60</h3><p>Shop Now</p></a>
            <a href="./women.html"><img src="https://images.dsw.com/is/image/DSWShoes/P221473_funnel_under70?impolicy=qlt-medium&imwidth=1011&imdensity=1" alt="card"><h3>Women's boot under $70</h3><p>Shop Now</p></a>
-           <a href="./women.html"><img src="https://images.dsw.com/is/image/DSWShoes/P221473_funnel_under75?impolicy=qlt-medium&imwidth=1011&imdensity=1" alt="card"><h3>Athletic & Sneakers under $75</h3><p>Shop Now</p></a>
+           <a href="./women.html"><img src="https://images.dsw.com/is/image/DSWShoes/P221473_funnel_under75?impolicy=qlt-medium&imwidth=1011&imdensity=1" alt="card"><h3>Sneakers under $75</h3><p>Shop Now</p></a>
         </div>
        </div>
 
@@ -293,13 +294,11 @@
         </div>
         <div class="imageSection">
             <section>
-               <!--<div><img src="" alt="error"></div>
-                <div><img src="" alt="error"></div>
-                <div><img src="" alt="error"></div>
-                <div><img src="" alt="error"></div>
-                <div><img src="" alt="error"></div>
-                <div><img src="" alt="error"></div>
-                <div><img src="" alt="error"></div>--> 
+                <div><img src="https://images.dsw.com/is/image/DSWShoes/552292_751_ss_01?impolicy=colpg&imwidth=800&imdensity=1" alt="error"><h3>Betsey Johnson</h3><p>Arch Fit Waveport Sneaker-Men's</p><p>Add to bag to see Price</p><button>Quick Add</button></div>
+                <div><img src="https://images.dsw.com/is/image/DSWShoes/520716_917_ss_01?impolicy=colpg&imwidth=800&imdensity=1" alt="error"><h3>Skechers</h3><p>Luton Hiking Boot-Men's</p><p>$34</p><button>Quick Add</button></div>
+                <div><img src="https://images.dsw.com/is/image/DSWShoes/522856_200_ss_01?impolicy=colpg&imwidth=800&imdensity=1" alt="error"><h3>Wolverine</h3><p>Adilette CF Ulta Slide Sandal</p><p>$54</p><button>Quick Add</button></div>
+                <div><img src="https://images.dsw.com/is/image/DSWShoes/515822_100_ss_01?impolicy=colpg&imwidth=800&imdensity=1" alt="error"><h3>Adidas</h3><p>Sunmaze Shine Flip Flop</p><p>$10</p><button>Quick Add</button></div>
+                <div><img src="https://images.dsw.com/is/image/DSWShoes/521582_339_ss_01?impolicy=colpg&imwidth=800&imdensity=1" alt="error"><h3>Clarks</h3><p>Adilette CF Ulta Slide Sandal</p><p>$40</p><button>Quick Add</button></div>
             </section>
             
         </div>
@@ -320,6 +319,106 @@
 
         </div>
        </div>
+
+
+
+
+       <!-------------------------------------Footer------------------------------------>
+       <div class="footer">
+        <div>
+            <h3>Customer Support</h3>
+            <div>
+                <a href="#">Email Us</a>
+                <a href="#">Order Status</a>
+                <a href="#">Returns & Exchanges</a>
+                <a href="#"> 1.866.379.7463  </a>
+                <a href="#">Store Finder</a>
+                <a href="#">Customer Service</a>
+            </div>
+           
+        </div>
+        <div>
+            <h3>Account</h3>
+            <div class="linkss">
+                <a href="./signin.html">Log In</a>
+                <a href="./signup.html">Create An Account</a>
+                <a href="#">My Orders</a>
+                <a href="#">IV VIP</a>
+                <a href="#">IV Rewards</a>
+                <a href="#">Gift Cards</a>
+            </div>
+        </div>
+        <div>
+            <h3>About IV</h3>
+            <div class="linkss">
+                <a href="#">Careers</a>
+                <a href="#">Designer Brands Inc.</a>
+                <a href="#">Philanthropy</a>
+                <a href="#">Potential Suppliers</a>
+                <a href="#">The W Nail Bar</a>
+                <a href="#">Shoe Repair</a>
+                <a href="#">Fashion & Resource</a>
+            </div>
+        </div>
+        <div>
+            <h3>Shop</h3>
+            <div id="f">
+                <a href="#">Shoes</a>
+                <a href="#">Slides</a>
+                <a href="#">Platform Boots</a>
+                <a href="#">Slippers</a>
+                <a href="#">Boots</a>
+                <a href="#">Sandals</a>
+                <a href="#">Running Shoes</a>
+                <a href="#">Sneakers</a>
+                <a href="#">Rain Boots</a>
+                <a href="#">Chelsea Boots</a>
+                <a href="#">Dress Shoes</a>
+                <a href="#">Cowboy Boots</a>
+                <a href="#">Heels</a>
+                <a href="#">Work & Safety</a>
+            </div>
+        </div>
+        <div id="last">
+            <h1>We Inspire Self Expression</h1>
+            <div id="social">
+                <a  href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+            <div id="e">
+                <h3>Sign Up For Emails & get 10% OFF!* </h3>
+                <span>
+                    <p> *First-time subscribers only. Returning subscribers will be resubscribed for marketing/promo emails.</p>
+                </span>
+                <form>
+                    <input type="email" placeholder="Enter your email address...">
+                    <input id="sub" type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="app">
+                <h2>Download the app from Playstore or Appstore</h2>
+                
+                
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p> © 2023 Designer Brands. All rights reserved </p>
+        <div>
+            <a href="">Privacy Policy</a>
+            <a href="">California Privacy Notice</a>
+            <a href="">Tems of Use</a>
+            <a href="">Supply Chain Transparency</a>
+            <a href="">Do Not Sell or Share My Personal Information</a>
+            <a href="">Accessibility Statement</a>
+            <a href="">Comp. Value Details</a>
+            <a href="">Pricing & Exclusions</a>
+        </div>
+    </footer>
     
 </body>
 <!--Script file-->

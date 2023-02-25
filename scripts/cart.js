@@ -62,17 +62,26 @@ function myFunction() {
 
 //Adding Items to Cart
 
- 
+ let bill = document.getElementById("bill");
   let itemData = document.getElementsByClassName("item-data");
+  let subtotal = document.getElementById("subtotal");
+  let tax = document.getElementById("tax");
+  let totalOrder = document.getElementById("total-order");
+  let promocodeless = document.getElementById("promoCode");
+  let applybtn = document.getElementById("apply");
   
   let data = JSON.parse(localStorage.getItem("dsw-cart"))||[];
+  // subtotal.textContent = +(data[])
 
   let emptyCart = document.getElementById("cart");
+  let t_i = document.getElementById("total-i")
   let totalItems = document.getElementById("item-count");
   totalItems.innerHTML = data.length;
+  t_i.innerHTML = data.length;
   if(data === null){
     emptyCart.style.display = "block";
     cardCont.style.display = "none";
+    bill.style.display = "none";
   }
   
   let cardCont = document.getElementById("card-cont");
@@ -85,8 +94,11 @@ function myFunction() {
     cardCont.innerHTML = "";
 
     data.forEach((ele)=>{
+        
+      // subtotal.textContent = `$${+(ele.price)}`
+      // totalOrder.textContent = `$${+(ele.price)}`
+      
 
-     
 
       let carddiv = document.createElement("div");
       carddiv.classList="cartdiv";
@@ -146,6 +158,8 @@ function myFunction() {
       incQuan.addEventListener("click",()=>{
          ele.quantity++
          quan.textContent = `Quantity:${ele.quantity}`
+          
+
 
       })
        
@@ -201,8 +215,32 @@ console.log(itemRemove)
       carddiv.append(imgdiv,divcontent,shipping);
       
       cardCont.append(carddiv);
+
     })
+    var sum = 0;
+    data.forEach((el)=>{
+      // let sum = 0
+      sum+=el.price
+    })
+    subtotal.textContent = `$${sum}`
+    totalOrder.textContent = `$${sum}`
+
+    // console.log(sum)
+     
+    
+
+   
+    // if(promocodeless.value==code){
+    //   totalOrder.textContent - 153
+    // }
   }
+
+  applybtn.addEventListener("click",()=>{
+    let code = "luckyless"
+    if(promocodeless.value==code){
+      totalOrder.textContent -=100
+    }
+  })
 
 
 

@@ -54,6 +54,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
 
 }
 
@@ -275,6 +276,7 @@ border-bottom: 4px solid #000;
     border-bottom-color: #e8e9e9;
     border-left: none;
     border-right: none;
+    background-color: white;
 }
 
 .container>button {
@@ -377,6 +379,7 @@ button:focus {
     border-bottom: 1px solid #e8e9e9;
     align-items: center;
     cursor: pointer;
+    background-color: white;
     /* margin-left:190px; */
 }
 
@@ -390,8 +393,8 @@ button:focus {
     align-items: center;
 }
 
-.bar>:nth-child(1){
-    margin-left:190px;
+.bar>:nth-child(1) {
+    margin-left: 190px;
 }
 
 .bar>div>#circles {
@@ -482,8 +485,9 @@ button:focus {
 #cont-1 {
     /* height: 70vh; */
     width: 100%;
-    background-color: #ddd3d376;
-    padding-top:20px;
+    /* background-color: #ddd3d376; */
+    background-color: #eceaead7;
+    padding-top: 20px;
 }
 
 #rth {
@@ -501,40 +505,48 @@ button:focus {
     height: 26vh;
     background-color: white;
     padding-top: 46px;
-    display:none;
+    display: none;
 }
 
 #cart-2 {
     height: 8vh;
     width: 31%;
-    margin:auto;
+    margin: auto;
 }
 
-#e-bag{
+#e-bag {
     height: 4vh;
-    width:89%;
-    margin:15px auto;
+    width: 89%;
+    margin: 15px auto;
 }
 
-#cart>:nth-child(3):hover{
-border:2px solid red;
+#cart>:nth-child(3):hover {
+    border: 2px solid red;
 }
 
-#need-help{
+#need-help {
     margin: -155px 85px;
     width: 89%;
     height: 9vh;
     background-color: white;
-    padding-top:25px;
-    display:flex;
+    padding-top: 25px;
+    display: flex;
     justify-content: space-between;
+    position: relative;
+    top: 250px;
+    bottom: 0px;
+    right: 0px;
+    left: 0%;
+    display: none;
 }
-.nh-boxes{
-    height:100%;
-    margin-left:8px;
+
+.nh-boxes {
+    height: 100%;
+    margin-left: 8px;
 }
-.nh-boxes:hover{
-    border:2px solid red;
+
+.nh-boxes:hover {
+    border: 2px solid red;
 }
 
 #card-cont {
@@ -542,61 +554,225 @@ border:2px solid red;
     width: 60%;
     /* background-color: white; */
     padding-top: 46px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.item-image{
+.item-image {
     height: 23vh;
     width: 25%;
     margin: 0px 0px 0px 0px;
 }
 
-.cartdiv{
+.cartdiv {
     height: 27vh;
     width: 100%;
     margin: 15px 0px 0px 0px;
-    display:flex;
+    display: flex;
     background-color: white;
     /* border:1px solid red */
-    
+
 }
 
-.truck{
-    height:7vh;
-    width:30%;
-    margin-top:12px;
-    display:flex;
-    justify-content: space-between;
-}
-.item-des{
-    height: 23vh;
-    width: 25%;
-    margin: 0px 0px 0px 0px;
-    margin-left:30px;
-}
-
-.btns{
-    height:4vh;
-    width:150px;
-    margin:10px 0px 0px 270px;
+.truck {
+    height: 7vh;
+    width: 30%;
+    margin-top: 12px;
     display: flex;
     justify-content: space-between;
 }
 
-.btns>:nth-child(1){
-   width:35px;
-   font-size:18px;
-   background-color: rgb(241, 241, 241);
-}
-.btns>button{
-border-radius: 5px;
-font-weight: 600;
+.item-des {
+    height: 23vh;
+    width: 25%;
+    margin: 0px 0px 0px 0px;
+    margin-left: 30px;
 }
 
-.btns>button:hover{
+.btns {
+    height: 4vh;
+    width: 150px;
+    margin: 10px 0px 0px 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns>:nth-child(1) {
+    width: 35px;
+    font-size: 18px;
+    background-color: rgb(241, 241, 241);
+}
+
+.btns>button {
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btns>button:hover {
+    color: white;
+    background-color: teal;
+    border: 2px solid red;
+}
+
+#bill {
+    height: 80vh;
+    width: 28vw;
+    position: absolute;
+    top: 293px;
+    bottom: 0px;
+    right: 0px;
+    left: 67%;
+    background-color: #f1f0f0d7;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#wfs {
+    height: 80%;
+    /* border: 1px solid red; */
+    background-color: white;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#p-code {
+    height: 80%;
+    /* border: 1px solid red; */
+    background-color: white;
+    margin-top: -11px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#total {
+    /* border: 1px solid red; */
+    background-color: white;
+    margin-top: -20px;
+    padding-left: 10px;
+    /* padding-bottom: 30px; */
+}
+
+#wfs>h2,
+p,
+a {
+    margin-left: 20px;
+}
+
+#wfs>p {
+    font-size: 14px;
+}
+
+#wfs>h2 {
+    font-size: 20px
+}
+
+#p-code>p {
+    /* margin-top:0px; */
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+#p-code>input {
+    height: 25%;
+    width: 65%;
+    margin: -50px 0px 0px 19px;
+    font-size:18px;
+    font-weight:700;
+    text-align: center;
+   
+}
+
+#p-code>button {
+    height: 25%;
+    width: 20%;
+    margin: 0px 0px 0px 5px;
+    border:2px solid black;
+    border-radius: 10px;
+    color:black;
+    font-weight: 600;
+   
+}
+
+#p-code>button:hover{
+    background-color: #daa0b3;
+    color:black
+}
+
+#p-code>h2 {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#total>h2 {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#total>p {
+    margin-left: 20px;
+    font-size: 14px;
+    margin-top: -5px;
+
+}
+
+#total>h5 {
+    margin-left: 20px;
+    font-size: 15px;
+    margin-top: -5px;
+}
+
+#afterpay {
+    height: 30%;
+    width: 90%;
+    margin: -8px auto;
+    background-color: white
+}
+
+#total>:nth-child(6) {
+    height: 15%;
+    width: 80%;
+    margin-left:35px;
+    margin-top:-5px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color:rgb(123, 210, 210);
+    color:black
+}
+#total>:nth-child(6):hover {
+   background-color: teal;
     color:white;
-    background-color:teal;
-    border:2px solid red;
- }
+}
+
+body {
+    background-color: #eceaead7;
+}
+
+#info {
+    position: relative;
+    top: -68px;
+    right: 0px;
+    bottom: 0px;
+    left: 330px;
+}
+
+#subtotal {
+    margin-left: 240px;
+    font-size: 14px;
+}
+
+#shipping-charge {
+    margin-left: 180px;
+    font-size: 14px;
+    color: green
+}
+
+#tax {
+    margin-left: 250px;
+    font-size: 14px;
+}
+
+#total-order {
+    margin-left: 272px;
+    font-size: 14px;
+}

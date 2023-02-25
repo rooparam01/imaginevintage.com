@@ -171,12 +171,13 @@ a:focus {
     transform: translate(0);
   
 
-   
-    transition: opacity 1.4s ease-out; /* opacity transition */
+    transition-delay: 1s;
+    transition-timing-function: opacity ease-in-out; /* opacity transition */
 }
 
 .show .dropdown-content {
-  
+  transition-delay: 1s;
+  transition-timing-function: opacity ease-in-out; 
     opacity: 1; /* show when .show class is added to parent */
 }
   
@@ -195,6 +196,8 @@ a:focus {
   }
   
   .show {
+    transition-delay: 1s;
+    transition-timing-function: opacity ease-in-out; 
     display: block;
   }
 
@@ -817,3 +820,9 @@ footer>div>a{
   margin-left: 1.2%;
   font-size: .8rem;
 }
+ /*MEDIA QUERIES*/
+
+ @media only screen and (max-width:1432px){
+
+  
+ }

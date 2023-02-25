@@ -43,7 +43,7 @@
           {
             "id": 6,
             "brand": "blackberrys",
-            "title": "Skechers Respected Boswell Boot",
+            "title": "Skechers Boswell Boot",
             "image": "https://images.dsw.com/is/image/DSWShoes/528832_021_ss_01?impolicy=colpg&imwidth=800&imdensity=1",
             "category": "women",
             "price": 2599
@@ -67,7 +67,7 @@
           {
             "id": 9,
             "brand": "van-heusen",
-            "title": "Skechers Respected Boswell Boot",
+            "title": "Skechers Boswell Boot",
             "image": "https://images.dsw.com/is/image/DSWShoes/549434_095_ss_01?impolicy=colpg&imwidth=800&imdensity=1",
             "category": "men",
             "price": 1400
@@ -106,7 +106,7 @@
           {
             "id": 14,
             "brand": "allen-solly",
-            "title": "Charles By Charles David Defense",
+            "title": "Charles David Defense",
             "image": "https://images.dsw.com/is/image/DSWShoes/499301_002_ss_01?impolicy=colpg&imwidth=800&imdensity=1",
             "category": "men",
             "price": 999
@@ -138,7 +138,7 @@
           {
             "id": 17,
             "brand": "blackberrys",
-            "title": "Charles David Gimmick Combat Boot",
+            "title": "Charles Gimmick Combat Boot",
             "image": "https://images.dsw.com/is/image/DSWShoes/512439_610_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "women",
             "price": 699
@@ -146,7 +146,7 @@
           {
             "id": 18,
             "brand": "van-heusen",
-            "title": "Charles By Charles David Defense",
+            "title": "Charles David Defense",
             "image": "https://images.dsw.com/is/image/DSWShoes/534804_201_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "women",
             "price": 1400
@@ -170,7 +170,7 @@
           {
             "id": 21,
             "brand": "blackberrys",
-            "title": "Charles David Gimmick Combat Boot",
+            "title": "Charles Gimmick Combat Boot",
             "image": "https://images.dsw.com/is/image/DSWShoes/395254_040_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "women",
             "price": 3500
@@ -210,7 +210,7 @@
           {
             "id": 26,
             "brand": "van-heusen",
-            "title": "Charles David Gimmick Combat Boot",
+            "title": "Charles Gimmick Combat Boot",
             "image": "https://images.dsw.com/is/image/DSWShoes/433555_001_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "women",
             "price": 1400
@@ -250,7 +250,7 @@
           {
             "id": 30,
             "brand": "van-heusen",
-            "title": "Jessica Simpson Daria Kerina Boot",
+            "title": "Jessica Simpson Daria Boot",
             "image": "https://images.dsw.com/is/image/DSWShoes/519260_437_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category":"kids",
             "price": 1400
@@ -328,7 +328,7 @@
           {
             "id": 40,
             "brand": "roadster",
-            "title": "Kelly & Katie Eva Mary Jane Pump",
+            "title": "Kelly & Katie Eva Pump",
             "image": "https://images.dsw.com/is/image/DSWShoes/508376_001_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "kids",
             "price": 3800
@@ -336,7 +336,7 @@
           {
             "id": 41,
             "brand": "blackberrys",
-            "title": "Badgley Mischka Florence Pump - Kids'",
+            "title": "Badgley Mischka Florence Pump",
             "image": "https://images.dsw.com/is/content/DSWShoes/511782_981_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "kids",
             "price": 2100
@@ -344,7 +344,7 @@
           {
             "id": 42,
             "brand": "van-heusen",
-            "title": "Badgley Mischka Florence Pump - Kids'",
+            "title": "Badgley Mischka Florence Pump",
             "image": "https://images.dsw.com/is/image/DSWShoes/527608_934_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "kids",
             "price": 1400
@@ -352,7 +352,7 @@
           {
             "id": 43,
             "brand": "allen-solly",
-            "title": "Kelly & Katie Eva Mary Jane Pump",
+            "title": "Kelly & Katie Eva Mary Pump",
             "image": "https://images.dsw.com/is/image/DSWShoes/540584_033_ss_01?impolicy=colpg&imwidth=400&imdensity=1",
             "category": "kids",
             "price": 999

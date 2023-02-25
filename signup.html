@@ -6,13 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+      body{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        background-size: 100%;
+
+      }
+      .all{
+        width: 100%;
+        height:940px;
+        border: 1px solid  white;
+        background: url("https://images.dsw.com/is/image/DSWShoes/sign_in_bg?impolicy=qlt-medium-high&imwidth=1400&imdensity=1")
+       
+      }
+     
+      
+      
         .main{
-            height: 850px;
+            height: 870px;
             width: 40%;
             background-color: white;
             margin-left: 700px;
-            margin-top: 30px;
-            padding: 20px;
+            margin-top: 50px;
+            padding-left: 20px;
+           border: 1px solid white;
+           /* background: url("");*/
         }
         .main h1{
             font-size: 32px;
@@ -39,11 +61,432 @@
         background-color: black;
         color: white;
       }
+      header{
+    width: 100vw;
+    height: 5vh;
+    background-color: #f9f9f8;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+   
+   
+}
+
+/*This is for header anchor tag*/
+
+
+header a{
+    text-decoration: none;
+    color: #848383;
+    margin-right: 3%;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+.header a:focus{
+    border-style: dashed !important;;
+    border-width: 1px !important;;
+}
+a:focus {
+    border-style: dashed;
+    border-width: 1px;
+}
+
+
+/*This is for Navbar*/
+
+
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: white;
+   
+}
+
+
+.navbar>.logo{
+    display: flex;
+    margin-left: 2%;
+    height: 60%;
+  
+    width: 30%;
+}
+
+
+.navbar>.logo>form{
+    margin-left: 2%;
+    height: 100%;
+    width: 80%;
+    display: flex;
+ 
+}
+
+
+.navbar>.logo>form>input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 2%;
+}
+.navbar>.logo>#logos{
+    cursor: pointer;
+}
+
+
+
+    /* Style the input placeholder */
+
+
+.navbar > .logo > form > input::placeholder {
+
+    color: #999;
+    padding-left: 10%;
+  }
+  #logos{
+    width: 10%;
+    height: 100%;
+  }
+  /* Style the search Button */
+
+#btn-search{
+    margin-left: 2%;
+    height: 100%;
+    width: 12%;
+    border: none;
+    background-color: #f0f0f0;
+}
+
+
+/* Style the search button image */
+
+
+#btn-search>img{
+    height: 50%;
+}
+
+/* Style the drop Down*/
+
+.dropdown {
+  
+    float: left;
+    overflow: hidden;
+    
+    display:flex;
+    justify-content: space-around;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    padding: 2.2%;
+}
+#person{
+    height: 50%;
+}
+  
+.dropdown .dropbtn {
+   
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+  }
+  
+  /*.navbar .dropdown:hover .dropbtn, .dropbtn:focus {
+   border-bottom: 4px solid #000;
+   }
+   */
+
+  .dropdown .dropbtn:focus {
+    border-style: dashed;
+    border-width: 1px;
+}
+
+ 
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 15%;
+    transform: translate(0);
+  
+
+   
+    transition: opacity 1.4s ease-out; /* opacity transition */
+}
+
+.show .dropdown-content {
+  
+    opacity: 1; /* show when .show class is added to parent */
+}
+  
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  /* Style the navBar side*/
+
+
+  .navbar>.side{
+    
+    width: 25%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+  }
+
+
+  /* Style the navBar side divs*/
+
+
+
+  .navbar>.side>div{
+    cursor: pointer;
+   
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    
+  }
+
+    /* Style the navBar side divs anchor tags*/
+
+
+  .navbar>.side>div>a{
+    
+    text-decoration: none;
+    margin-left: 1.2%;
+    font-size: large;
+    color: black;
+    font-size: 1rem;
+  }
+
+  .navbar>.side>.cart>img{
+     height: 60%;
+  }
+
+
+  .navbar>.side>.cart>a{
+    margin-left:1.2% ;
+  }
+
+
+  .navbar>.side>div:hover{
+    border-bottom: 4px solid #000;
+  }
+
+
+
+
+
+
+
+  
+  .footer{
+  padding-left: 1.2%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9f9f8;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.footer>div>div{
+ 
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-content:space-around ;
+  flex-direction: column;
+}
+.footer>div>div>a{
+  text-decoration: none;
+  color: black;
+}
+.footer>div>#f{
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-content:space-around ;
+  flex-direction: column;
+}
+.fa-facebook {
+  background: transparent;
+  color: white;
+}
+.fa-twitter {
+  background: transparent;
+  color: white;
+}
+.fa-instagram {
+  background: transparent;
+  color: white;
+}
+.fa-pinterest {
+  background: transparent;
+  color: white;
+}
+.fa-youtube {
+  background: transparent;
+  color: white;
+}
+#social{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  width: 50%;
+  margin: auto;
+}
+#social>.fa {
+  
+  font-size: 2rem;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  
+}
+.footer>div>#e{
+  height: 30%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+
+  margin-left: 1.2%;
+  flex-direction: column;
+}
+
+.footer>#last>#social{
+  height: 10%;
+  
+}
+.footer>div>#e>form{
+  display: flex;
+  height: 20%;
+  
+
+ 
+}
+.footer>div>#e>form>input{
+  border-color: black;
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.footer>div>#e>form>#sub{
+  border-color: black;
+  width: 15%;
+  height: 112%;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  font-weight: 700;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+footer{
+  border-top: 1px solid red;
+  border-top-color: gray;
+  height: 10vh;
+  width: 100vw;
+  padding: 1.5%;
+  background-color: #f9f9f8;
+}
+footer>div>a{
+  text-decoration: none;
+  color: gray;
+  margin-left: 1.2%;
+  font-size: .8rem;
+}
     </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body  background="https://images.dsw.com/is/image/DSWShoes/sign_in_bg?impolicy=qlt-medium-high&imwidth=1400&imdensity=1">
+<body >
+     <!--This is for Header-->
+
+     <header><a tabindex="0" href="#">Enable Accessiblity</a></header>
+
+     <!--This is for NavBar-->
+    <nav class="navbar">
+        <div class="logo">
+
+             <!--Logo-->
+
+        <img id="logos" src="./Imagine Vintage.png" alt="logo">
+
+         <!--Search Bar-->
+        <form>
+            <input type="search" name="Search" id="search" placeholder="Search styles, brands & more">
+            <button id="btn-search" type="submit"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/1x/external-magnifying-glass-interface-kiranshastry-solid-kiranshastry.png" alt=""></button>
+        </form>
+
+
+        </div>
+
+         <!--This is for DropDown-->
+
+        <div class="side">
+            <div class="dropdown">
+               <img id="person" src="https://img.icons8.com/ios-filled/1x/gender-neutral-user.png" alt="">
+               <!--<button id="l" class="dropbtn" onclick="myFunction()">Sign In
+                    
+                  <i class="fa fa-caret-down"></i>
+                </button>-->
+                <div class="dropdown-content" id="myDropdown">
+                  <a id="roopa" href="./signin.html">Sign In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a href="./cart.html">My Orders &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a href="#">My Favourites &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a href="#">My VIP Rewards &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a id="logout" href="#">Log-Out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                </div>
+                </div>
+                <div class="find">
+                    <img src="https://img.icons8.com/material-rounded/1x/marker.png" alt="">
+                    <a href="#">Find a store</a>
+                </div>
+                <div class="cart">
+                    <img src="https://img.icons8.com/ios-glyphs/1x/shopping-bag.png" alt="error">
+                    <a href="./cart.html">Bag</a>
+                </div>
+        </div>
+    </nav>
+    <div class="all">
     <div class="main">
-        <form >
+        <form id="signup">
    <h1>Sign Up</h1>
    <input type="text" id="name" minlength="4" placeholder="Name" required/>
        
@@ -144,10 +587,107 @@
     </form>
 
     </div>
+  </div>
+    <div class="footer">
+      <div>
+          <h3>Customer Support</h3>
+          <div>
+              <a href="#">Email Us</a>
+              <a href="#">Order Status</a>
+              <a href="#">Returns & Exchanges</a>
+              <a href="#"> 1.866.379.7463  </a>
+              <a href="#">Store Finder</a>
+              <a href="#">Customer Service</a>
+          </div>
+         
+      </div>
+      <div>
+          <h3>Account</h3>
+          <div class="linkss">
+              <a href="./signin.html">Log In</a>
+              <a href="./signup.html">Create An Account</a>
+              <a href="#">My Orders</a>
+              <a href="#">IV VIP</a>
+              <a href="#">IV Rewards</a>
+              <a href="#">Gift Cards</a>
+          </div>
+      </div>
+      <div>
+          <h3>About IV</h3>
+          <div class="linkss">
+              <a href="#">Careers</a>
+              <a href="#">Designer Brands Inc.</a>
+              <a href="#">Philanthropy</a>
+              <a href="#">Potential Suppliers</a>
+              <a href="#">The W Nail Bar</a>
+              <a href="#">Shoe Repair</a>
+              <a href="#">Fashion & Resource</a>
+          </div>
+      </div>
+      <div>
+          <h3>Shop</h3>
+          <div id="f">
+              <a href="#">Shoes</a>
+              <a href="#">Slides</a>
+              <a href="#">Platform Boots</a>
+              <a href="#">Slippers</a>
+              <a href="#">Boots</a>
+              <a href="#">Sandals</a>
+              <a href="#">Running Shoes</a>
+              <a href="#">Sneakers</a>
+              <a href="#">Rain Boots</a>
+              <a href="#">Chelsea Boots</a>
+              <a href="#">Dress Shoes</a>
+              <a href="#">Cowboy Boots</a>
+              <a href="#">Heels</a>
+              <a href="#">Work & Safety</a>
+          </div>
+      </div>
+      <div id="last">
+          <h1>We Inspire Self Expression</h1>
+          <div id="social">
+              <a  href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-pinterest"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-youtube"></a>
+          </div>
+          <div id="e">
+              <h3>Sign Up For Emails & get 10% OFF!* </h3>
+              <span>
+                  <p> *First-time subscribers only. Returning subscribers will be resubscribed for marketing/promo emails.</p>
+              </span>
+              <form>
+                  <input type="email" placeholder="Enter your email address...">
+                  <input id="sub" type="submit" value="Submit">
+              </form>
+          </div>
+          <div id="app">
+              <h2>Download the app from Playstore or Appstore</h2>
+              
+              
+
+          </div>
+      </div>
+  </div>
+  <footer>
+      <p> © 2023 Designer Brands. All rights reserved </p>
+      <div>
+          <a href="">Privacy Policy</a>
+          <a href="">California Privacy Notice</a>
+          <a href="">Tems of Use</a>
+          <a href="">Supply Chain Transparency</a>
+          <a href="">Do Not Sell or Share My Personal Information</a>
+          <a href="">Accessibility Statement</a>
+          <a href="">Comp. Value Details</a>
+          <a href="">Pricing & Exclusions</a>
+      </div>
+  </footer>
+  
 </body>
 
   <script>
-    let myform=document.querySelector("form");
+    let myform=document.getElementById("signup");
     let nameinput=document.getElementById("name");
     let emailinput=document.getElementById("email");
     let passwordinput=document.getElementById("password");

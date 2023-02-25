@@ -1,8 +1,309 @@
-*{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body{
+    
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x:hidden;
+    
 }
 /* nav bar css */
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
 
+
+.navbar>.logo{
+    display: flex;
+    margin-left: 2%;
+    height: 60%;
+  
+    width: 30%;
+}
+
+
+.navbar>.logo>form{
+    margin-left: 2%;
+    height: 100%;
+    width: 80%;
+    display: flex;
+ 
+}
+
+
+.navbar>.logo>form>input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 2%;
+}
+.navbar>.logo>#logos{
+    cursor: pointer;
+}
+
+
+
+    /* Style the input placeholder */
+
+
+.navbar > .logo > form > input::placeholder {
+
+    color: #999;
+    padding-left: 10%;
+  }
+  #logos{
+    width: 10%;
+    height: 100%;
+  }
+  /* Style the search Button */
+
+#btn-search{
+    margin-left: 2%;
+    height: 100%;
+    width: 12%;
+    border: none;
+    background-color: #f0f0f0;
+}
+
+
+/* Style the search button image */
+
+
+#btn-search>img{
+    height: 50%;
+}
+
+/* Style the drop Down*/
+
+.dropdown {
+  
+    float: left;
+    overflow: hidden;
+    
+    display:flex;
+    justify-content: space-around;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    padding: 2.2%;
+}
+#person{
+    height: 50%;
+}
+  
+.dropdown .dropbtn {
+   
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+  }
+  
+  /*.navbar .dropdown:hover .dropbtn, .dropbtn:focus {
+   border-bottom: 4px solid #000;
+   }
+   */
+
+  .dropdown .dropbtn:focus {
+    border-style: dashed;
+    border-width: 1px;
+}
+
+ 
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 15%;
+    transform: translate(0);
+  
+
+   
+    transition: opacity 1.4s ease-out; /* opacity transition */
+}
+
+.show .dropdown-content {
+  
+    opacity: 1; /* show when .show class is added to parent */
+}
+  
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  /* Style the navBar side*/
+
+
+  .navbar>.side{
+    
+    width: 25%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+  }
+
+
+  /* Style the navBar side divs*/
+
+
+
+  .navbar>.side>div{
+    cursor: pointer;
+   
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    
+  }
+
+    /* Style the navBar side divs anchor tags*/
+
+
+  .navbar>.side>div>a{
+    
+    text-decoration: none;
+    margin-left: 1.2%;
+    font-size: large;
+    color: black;
+    font-size: 1rem;
+  }
+
+  .navbar>.side>.cart>img{
+     height: 60%;
+  }
+
+
+  .navbar>.side>.cart>a{
+    margin-left:1.2% ;
+  }
+
+
+  .navbar>.side>div:hover{
+    border-bottom: 4px solid #000;
+  }
+
+  /* Style the Container below navbar */
+
+  .container{
+    width: 100vw;
+    height: 8vh;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-color:#e8e9e9 ;
+    border-bottom-color:#e8e9e9 ;
+    border-left:none ;
+    border-right:none ;
+  }
+  .container>button{
+    border: none;
+    background-color: transparent;
+    margin-left: 2%;
+    cursor: pointer;
+    outline: 0;
+    line-height: 40px;
+    color: #333;
+    font-size: 1rem;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    position: relative;
+    padding: 0;
+    text-decoration: none;
+
+  }
+  .container>button:active,button:focus{
+    border-bottom:5px solid black ;
+  }
+  #red{
+     color: #c63a64;
+  }
+  #redd{
+    color: #c63a64;
+  }
+  #dropdown-container {
+    display: none;
+    position: fixed;
+    top: 22vh;
+    left: 0;
+    width: 100vw;
+    height: 78vh;
+    background-color: white;
+    transition: top 0.5s ease-in-out;
+    z-index: 999;
+}
+#dropdown-container>div{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    
+}
+#dropdown-container>div>div{
+   
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#dropdown-container>div>#shop{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    height: 50%;
+}
+#dropdown-container>div>#shop>div{
+    padding: 10%;
+    text-align: center;
+    border: 1px solid #bbbbbb;
+}
+#dropdown-container>div>#shop>div>span{
+    text-align: center;
+    margin-top: 5%;
+    cursor: pointer;
+    
+}
+#dropdown-container>div>div>a{
+    color:black;
+    text-decoration: none;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+#dropdown-container>div>h4{
+    font-family:Roboto,Helvetica,Arial,sans-serif;
+
+}
 /* top div css */
 #top{
     margin: auto;
@@ -38,6 +339,18 @@
     margin-left: 5px;
     margin-bottom: 0px;
 }
+/* all products chk css */
+#filters .all_product_chk{
+    padding: left 10px; 
+    font-size:larger;
+    display:flex;
+    align-items: center;
+}
+#filters .all_product_chk input{
+    width: 20px;
+    height: 20px;
+}
+/* brands divs and i/p css */
 #filters .box{
     padding: left 10px; 
     font-size:large;
@@ -103,3 +416,124 @@
     transition-delay: 10ms;
 }
 
+/*FOOTER*/
+
+.footer{
+    padding-left: 1.2%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f9f9f8;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  
+  .footer>div>div{
+   
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-content:space-around ;
+    flex-direction: column;
+  }
+  .footer>div>div>a{
+    text-decoration: none;
+    color: black;
+  }
+  .footer>div>#f{
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-content:space-around ;
+    flex-direction: column;
+  }
+  .fa-facebook {
+    background: transparent;
+    color: white;
+  }
+  .fa-twitter {
+    background: transparent;
+    color: white;
+  }
+  .fa-instagram {
+    background: transparent;
+    color: white;
+  }
+  .fa-pinterest {
+    background: transparent;
+    color: white;
+  }
+  .fa-youtube {
+    background: transparent;
+    color: white;
+  }
+  #social{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+  }
+  #social>.fa {
+    
+    font-size: 2rem;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    
+  }
+  .footer>div>#e{
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+  
+    margin-left: 1.2%;
+    flex-direction: column;
+  }
+  
+  .footer>#last>#social{
+    height: 10%;
+    
+  }
+  .footer>div>#e>form{
+    display: flex;
+    height: 20%;
+    
+  
+   
+  }
+  .footer>div>#e>form>input{
+    border-color: black;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .footer>div>#e>form>#sub{
+    border-color: black;
+    width: 15%;
+    height: 112%;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  footer{
+    border-top: 1px solid red;
+    border-top-color: gray;
+    height: 10vh;
+    width: 100vw;
+    padding: 1.5%;
+    background-color: #f9f9f8;
+  }
+  footer>div>a{
+    text-decoration: none;
+    color: gray;
+    margin-left: 1.2%;
+    font-size: .8rem;
+  }

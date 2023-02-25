@@ -1,5 +1,53 @@
+//nav bar || header JS
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+// Get the dropdown container element
+const dropdownContainer = document.getElementById("dropdown-container");
+
+
+// Get all the buttons
+const buttons = document.querySelectorAll(".bt");
+
+// Added a click event listener to each button
+buttons.forEach(button => {
+button.addEventListener("click", (event) => {
+  // Show the dropdown container
+  dropdownContainer.style.display = "flex";
+  dropdownContainer.style.justifyContent = "space-evenly";
+
+  // Prevent the document click event from hiding the dropdown
+  event.stopPropagation();
+});
+});
+
+// Add a click event listener to the document
+window.addEventListener("click", () => {
+// Hide the dropdown container
+dropdownContainer.style.display = "none";
+});
+
+const renderMain = document.getElementById("logos")
+
+renderMain.addEventListener("click",()=>{
+location.href = "./index.html"
+
+})
+
 //api url-->
-let api="https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products";
+let api="./product.json";
 
 //products div element-->
 let cardDiv=document.getElementById("card-items");
@@ -98,9 +146,17 @@ sortSelect.addEventListener("change",()=>{
         return a.price-b.price;
        }else if(sortSelect.value==="Price High To Low"){
         return b.price-a.price;
+       }else{
+        window.location.reload();
        }
     });
     display(sortData);
+});
+
+//all products checkbox-->
+let all_Pro_chk=document.querySelector('.all_Chk');
+all_Pro_chk.addEventListener('click',()=>{
+  window.location.reload();
 });
 
 //checkbox tags-->
@@ -176,3 +232,25 @@ for(let i=0;i<filterPrice.length;i++){
     })
 }
 
+//Login and Logout Button
+
+let emailName = localStorage.getItem("userAuthenticationName");
+let login  =document.getElementById("roopa")
+let logOut = document.getElementById("logout")
+
+let displayName = document.getElementById("l")
+
+if(emailName!=""){
+  displayName.innerText = emailName
+  logOut.style.display="block"
+  login.style.display ="none"
+}else{
+  login.style.display ="block"
+  logOut.style.display="none"
+}
+logOut.addEventListener("click",()=>{
+  
+  let userAuthenticationName =""
+  localStorage.setItem("userAuthenticationName",userAuthenticationName)
+  window.location.reload()
+})

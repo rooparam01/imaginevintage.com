@@ -6,10 +6,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men</title>
     <link rel="stylesheet" href="./styles/men.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- nav bar section -->
+    <nav class="navbar">
+        <div class="logo">
 
+             <!--Logo-->
+
+        <img id="logos" src="./Imagine Vintage.png" alt="logo">
+
+         <!--Search Bar-->
+        <form>
+            <input type="search" name="Search" id="search" placeholder="Search styles, brands & more">
+            <button id="btn-search" type="submit"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/1x/external-magnifying-glass-interface-kiranshastry-solid-kiranshastry.png" alt=""></button>
+        </form>
+
+
+        </div>
+
+         <!--This is for DropDown-->
+
+        <div class="side">
+            <div class="dropdown">
+               <img id="person" src="https://img.icons8.com/ios-filled/1x/gender-neutral-user.png" alt="">
+                <button id="l" class="dropbtn" onclick="myFunction()">Sign In
+                    
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                  <a id="roopa" href="./signin.html">Sign In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a href="./cart.html">My Orders &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a href="#">My Favourites &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a href="#">My VIP Rewards &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                  <a id="logout" href="#">Log-Out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10097;</a>
+                </div>
+                </div>
+                <div class="find">
+                    <img src="https://img.icons8.com/material-rounded/1x/marker.png" alt="">
+                    <a href="#">Find a store</a>
+                </div>
+                <div class="cart">
+                    <img src="https://img.icons8.com/ios-glyphs/1x/shopping-bag.png" alt="error">
+                    <a href="./cart.html">Bag</a>
+                </div>
+        </div>
+    </nav>
+
+    <!--This is for container below navbar-->
+
+    <div class="container">
+        <button class="bt">Women</button>
+        <button class="bt">Men</button>
+        <button class="bt">Kids</button>
+        <button class="bt">Accessories & Clothings</button>
+        <button class="bt">Athletic and Sneakers</button>
+        <button class="bt">Brands</button>
+        <button class="bt" id="red">Clearance</button>
+        <button id="redd" class="bt">Deals</button>
+       
+    </div>
+    <div id="dropdown-container">
+       <div>
+        <h4>Shoes</h4>
+        <div>
+        <a href="">All Women's Shoe</a>
+        <a href="">Athletic & Sneakers</a>
+        <a href="">
+            Boots & Booties
+        </a>
+        <a href="">Casual Shoes</a>
+        <a href="">Clogs</a>
+        <a href="">Comfort Shoes</a>
+        <a href="">Dress Shoes</a>
+        <a href="">Espadrilles</a>
+        <a href="">Flats</a>
+        <a href="">Heels</a>
+        <a href="">Loafers</a>
+        <a href="">Mules</a>
+        <a href="">Sandals</a>
+        <a href="">Slippers</a>
+        <a href="">Wedges</a>
+        </div>
+        </div>
+       <div>
+        <h4>Sandals</h4>
+        <div>
+        <a href="">All Sandals</a>
+        <a href="">Casual Sandals</a>
+        <a href="">
+           Dress Sandals
+        </a>
+        <a href="">Flat Sandals</a>
+        <a href="">Flip Flops</a>
+        <a href="">Gladiator Sandals</a>
+        <a href="">Natural Detail Sandals</a>
+        <a href="">Platform Sandals</a>
+        <a href="">Flats</a>
+        <a href="">Heels</a>
+        <a href="">Loafers</a>
+        <a href="">Mules</a>
+        <a href="">Sandals</a>
+        <a href="">Slippers</a>
+        <a href="">Wedges</a>
+
+    </div>
+       </div>
+       <div>
+        <h4>Clothing</h4>
+        <div>
+        <a href="">All Women's Clothing</a>
+        <a href="">Bottoms</a>
+        <a href="">Jackets</a>
+        <a href="">Sports Bras</a>
+        <a href="">Tops</a>
+        <h4>Designer & Luxury</h4>
+        <h4>Hiking & Trail</h4>
+        <h4>New Arrivals</h4>
+        <h4>Prom</h3>
+        <h4>Wedding & Evening</h4>
+        <h4>Work & Safety Shoes</h4>
+        <h4>ImagineVintage</h4>
+        <h4>Clearance</h4>
+    </div>
+       </div>
+       <div>
+       <h4>Shop by Shoe Size </h4>
+       <div id="shop">
+        
+        <div>
+            <span>4</span>
+
+        </div>
+        <div><span>4.5</span>
+        </div>
+        <div><span>5</span>
+        </div>
+        <div><span>5.5</span>
+        </div>
+        <div><span>6</span>
+        </div>
+        <div><span>6.5</span>
+        </div>
+        <div><span>7</span>
+        </div>
+        <div><span>7.5</span>
+        </div>
+        <div><span>8</span>
+        </div>
+        <div><span>8.5</span>
+        </div>
+        <div><span>9</span>
+        </div>
+        <div><span>9.5</span>
+        </div>
+        <div><span>10</span>
+        </div>
+        <div><span>10.5</span>
+        </div>
+        <div><span>11</span>
+        </div>
+        <div><span>11.5</span>
+        </div>
+        <div><span>12</span>
+        </div>
+        <div><span>13</span>
+        </div>
+
+       </div>
+    </div>
+    </div>
     <!-- top div -->
     <div id="top">
         <div>
@@ -36,6 +203,12 @@
         <div id="filters">
              <h2>Filters</h2>
              <div id="brands-box">
+
+                <div class="all_product_chk">
+                    <input type="checkbox" class="all_Chk">
+                    <label for="checkbox">All Products</label>
+                </div>
+                
                 <h3><u>Brand</u></h3>
                 <div class="box">
                     <input type="checkbox" class="check"  value="blackberrys">
@@ -67,19 +240,19 @@
                 <div class="box">
                     <input type="radio" name="price-radio" id="lte-1000"
                     value="lte-1000">
-                    <label for="radio">less than = $1000</label>
+                    <label for="radio"><= $1000</label>
                 </div>
                 <div class="box">
                     <input type="radio" name="price-radio" id="lte-2000" value="lte-2000">
-                    <label for="radio">less than = $2000</label>
+                    <label for="radio"><= $2000</label>
                 </div>
                 <div class="box">
                     <input type="radio" name="price-radio" id="lte-3000" value="lte-3000">
-                    <label for="radio">less than = $3000</label>
+                    <label for="radio"><= $3000</label>
                 </div>
                 <div class="box">
                     <input type="radio" name="price-radio" id="lte-4000" value="lte-4000">
-                    <label for="radio">less than = $4000</label>
+                    <label for="radio"><= $4000</label>
                 </div>
                 <hr>
              </div>
@@ -99,7 +272,104 @@
             <div id="card-items">
 
             </div>
+        </div>    
     </div>
+    <!-------------------------------------Footer------------------------------------>
+    <div class="footer">
+        <div>
+            <h3>Customer Support</h3>
+            <div>
+                <a href="#">Email Us</a>
+                <a href="#">Order Status</a>
+                <a href="#">Returns & Exchanges</a>
+                <a href="#"> 1.866.379.7463  </a>
+                <a href="#">Store Finder</a>
+                <a href="#">Customer Service</a>
+            </div>
+           
+        </div>
+        <div>
+            <h3>Account</h3>
+            <div class="linkss">
+                <a href="./signin.html">Log In</a>
+                <a href="./signup.html">Create An Account</a>
+                <a href="#">My Orders</a>
+                <a href="#">IV VIP</a>
+                <a href="#">IV Rewards</a>
+                <a href="#">Gift Cards</a>
+            </div>
+        </div>
+        <div>
+            <h3>About IV</h3>
+            <div class="linkss">
+                <a href="#">Careers</a>
+                <a href="#">Designer Brands Inc.</a>
+                <a href="#">Philanthropy</a>
+                <a href="#">Potential Suppliers</a>
+                <a href="#">The W Nail Bar</a>
+                <a href="#">Shoe Repair</a>
+                <a href="#">Fashion & Resource</a>
+            </div>
+        </div>
+        <div>
+            <h3>Shop</h3>
+            <div id="f">
+                <a href="#">Shoes</a>
+                <a href="#">Slides</a>
+                <a href="#">Platform Boots</a>
+                <a href="#">Slippers</a>
+                <a href="#">Boots</a>
+                <a href="#">Sandals</a>
+                <a href="#">Running Shoes</a>
+                <a href="#">Sneakers</a>
+                <a href="#">Rain Boots</a>
+                <a href="#">Chelsea Boots</a>
+                <a href="#">Dress Shoes</a>
+                <a href="#">Cowboy Boots</a>
+                <a href="#">Heels</a>
+                <a href="#">Work & Safety</a>
+            </div>
+        </div>
+        <div id="last">
+            <h1>We Inspire Self Expression</h1>
+            <div id="social">
+                <a  href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+            <div id="e">
+                <h3>Sign Up For Emails & get 10% OFF!* </h3>
+                <span>
+                    <p> *First-time subscribers only. Returning subscribers will be resubscribed for marketing/promo emails.</p>
+                </span>
+                <form>
+                    <input type="email" placeholder="Enter your email address...">
+                    <input id="sub" type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="app">
+                <h2>Download the app from Playstore or Appstore</h2>
+                
+                
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p> © 2023 Designer Brands. All rights reserved </p>
+        <div>
+            <a href="">Privacy Policy</a>
+            <a href="">California Privacy Notice</a>
+            <a href="">Tems of Use</a>
+            <a href="">Supply Chain Transparency</a>
+            <a href="">Do Not Sell or Share My Personal Information</a>
+            <a href="">Accessibility Statement</a>
+            <a href="">Comp. Value Details</a>
+            <a href="">Pricing & Exclusions</a>
+        </div>
+    </footer>
 </body>
 <script src="./scripts/men.js"></script>
 </html>

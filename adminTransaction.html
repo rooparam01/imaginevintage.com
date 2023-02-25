@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Side</title>
+    <link rel="stylesheet" href="./styles/adminTransation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#"><img id="icon" src="./images/logoofwesite.jpg" alt="" /></a>
+      <h3 id="nameofpages">Products</h3>
+      <div id="admin">
+        <img src="./images/profile-svgrepo-com.svg" alt="" />
+      </div>
+    </nav>
+
+    <hr />
+    <div class="logoutsection">
+      <h5>Admin</h5>
+      <h5 id="logoutBtn">Log out</h5>
+    </div>
+    <div class="middlepart">
+      <div class="left">
+        <a href="./adminDashboard.html" class="dashboard">Dashboard</a>
+        <a href="./adminCustomers.html" class="Customers">Users</a>
+        <a href="./adminTransaction.html" class="Transation">Transation</a>
+        <a href="./adminProducts.html" class="Products">Products</a>
+      </div>
+
+      <div class="right">
+        <h4>Transation List</h4>
+        <!-- brand,category,id,image,price,title -->
+        <table>
+          <thead>
+            <tr>
+              <td>Transation Id</td>
+              <td>No of item</td>
+              <td>Amount</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let adminEl = document.getElementById("admin");
+  let logoutsectionEl = document.querySelector(".logoutsection");
+  let logoutBtnEl = document.getElementById("logoutBtn");
+
+  //Events
+  window.addEventListener("load", () => {
+    // window.location.href = "./index.html";
+  });
+  logoutBtnEl.addEventListener("click", () => {
+    window.location.href = "./index.html";
+  });
+
+  adminEl.addEventListener("click", () => {
+    if (logoutsectionEl.style.display === "block") {
+      logoutsectionEl.style.display = "none";
+    } else {
+      logoutsectionEl.style.display = "block";
+    }
+  });
+
+  //fetch Products Data from lS
+  //fetch Products Data from lS
+  // let ProductsDatas = JSON.parse(localStorage.getItem("dsw-product")) || [];
+
+  // DisplayData(ProductsDatas);
+
+  function DisplayData(arr) {
+    let content = ``;
+    for (let i = 0; i < arr.length; i++) {
+      content += createrow(arr[i]);
+    }
+    document.querySelector("tbody").innerHTML = content;
+  }
+  function createrow(el) {
+    return `<tr>
+                <td>${el.txnid}</td>
+                <td>${el.items}</td>
+                <td>${el.amount}</td>
+              </tr>`;
+  }
+</script>

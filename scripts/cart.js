@@ -60,7 +60,8 @@ function myFunction() {
   })
 
 
-//Adding Items to Cart
+
+// ---------------- All Variables Of Event Listeners ------------>
 
  let bill = document.getElementById("bill");
   let itemData = document.getElementsByClassName("item-data");
@@ -69,9 +70,10 @@ function myFunction() {
   let totalOrder = document.getElementById("total-order");
   let promocodeless = document.getElementById("promoCode");
   let applybtn = document.getElementById("apply");
+  let orderItem = document.getElementById("order-now");
   
   let data = JSON.parse(localStorage.getItem("dsw-cart"))||[];
-  // subtotal.textContent = +(data[])
+  
 
   let emptyCart = document.getElementById("cart");
   let t_i = document.getElementById("total-i")
@@ -95,18 +97,13 @@ function myFunction() {
 
     data.forEach((ele)=>{
         
-      // subtotal.textContent = `$${+(ele.price)}`
-      // totalOrder.textContent = `$${+(ele.price)}`
       
-
-
       let carddiv = document.createElement("div");
       carddiv.classList="cartdiv";
 
       let imgdiv = document.createElement("div")
       imgdiv.style.height= "100%";
       imgdiv.style.width= "30%";
-      // imgdiv.style.border = "1px dashed black"
 
       let image=document.createElement("img")
       image.src=ele.image
@@ -186,10 +183,9 @@ function myFunction() {
       remove.style.fontSize = "15px"
       remove.style.width= "50%"
       
-console.log(itemRemove)
+         
       itemRemove.forEach((element,i)=>{
         element.addEventListener("click",()=>{
-          console.log("roopa ram")
           if(data.length===1){
             localStorage.setItem("dsw-cart",(""))
           window.location.reload()
@@ -202,13 +198,10 @@ console.log(itemRemove)
             localStorage.setItem("dsw-cart",JSON.stringify(removeData))
             window.location.reload()
           }
-          
-
-
         })
       })
       
-    
+    // ----------------> All Appends ---------------------->
       shipping.append(incQuan,remove,decQuan)
       divcontent.append(title,desc,price,cate,size,quan);
       imgdiv.append(image);
@@ -217,159 +210,58 @@ console.log(itemRemove)
       cardCont.append(carddiv);
 
     })
+
+    // ----------------> Total Calculation Of Cart ---------------------->
     var sum = 0;
     data.forEach((el)=>{
-      // let sum = 0
-      sum+=el.price
+      sum+=el.price*t_i.textContent;
     })
     subtotal.textContent = `$${sum}`
     totalOrder.textContent = `$${sum}`
-
-    // console.log(sum)
-     
-    
-
-   
-    // if(promocodeless.value==code){
-    //   totalOrder.textContent - 153
-    // }
   }
+
+
+  // -------------> Promo Code Apply function --------------->
 
   applybtn.addEventListener("click",()=>{
     let code = "luckyless"
     if(promocodeless.value==code){
-      totalOrder.textContent -=100
+      totalOrder.textContent -=100;
     }
   })
 
 
+  // ----------------------------> Order Data Function (Order Placed Function) ------------->
 
-  
+  orderItem.addEventListener("click",()=>{
+    let user = localStorage.getItem("userAuthenticationName");
 
+    if(user){
 
-
-//   cartpagedatamain = document.getElementById("cartpagedatamain");
-// imageofcart = document.getElementById("imageofcart");
-// detailofcartpoducts = document.getElementById("detailofcartpoducts");
-// let cartLength = document.getElementById("home__cartLength");
-
-// let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-// let itemscount = document.getElementById("totalitemcount");
-
-// cartLength.innerText = cart.length;
-// itemscount.innerText = cart.length;
-
-// displayandShow(cart);
-
-// function displayandShow(cart) {
-//   itemscount.innerText = cart.length;
-//   cartLength.innerText = cart.length;
-//   cartpagedatamain.innerHTML = "";
-//   let totalprice = document.getElementById("total-price");
-  
-//   cart.forEach((ele) => {
-//     let cardMainCont = document.createElement("div");
-//     cardMainCont.classList = "cart__singleProductCard"; //give display flex
-
-//     let imageCont = document.createElement("div");
-
-//     let img = document.createElement("img");
-//     img.src = ele.image;
-
-//     let qtyBtnsCont = document.createElement("div");
-//     qtyBtnsCont.id = "cart__qtyBtnsCont";
-
-//     let increasequantity = document.createElement("button");
-//     increasequantity.classList = "button";
-//     increasequantity.innerText = "+";
-
-//     let quantity = document.createElement("span1");
-//     quantity.innerText = "Qty: " + Number(ele.qty);
-
-//     let decreasequantity = document.createElement("button");
-//     decreasequantity.classList = "button";
-//     decreasequantity.innerText = "-";
-
-//     increasequantity.addEventListener("click", () => {
-//       itemscount.innerText = ele.qty++;
-//       localStorage.setItem("cart", JSON.stringify(cart));
-//       console.log(ele);
-//       cart = JSON.parse(localStorage.getItem("cart"));
-//       displayandShow(cart);
-
-//       // window.location.reload()
-//     });
-//     decreasequantity.addEventListener("click", (e) => {
-//       // e.preventDefault();
-//       console.log("clicked");
-//       if (ele.qty > 1) {
-//         itemscount.innerText = ele.qty--;
-
-//         localStorage.setItem("cart", JSON.stringify(cart));
-//         cart = JSON.parse(localStorage.getItem("cart"));
-//         displayandShow(cart);
-//         // window.location.reload()
-//       }
-//     });
-
-//     qtyBtnsCont.append(increasequantity, quantity, decreasequantity);
-
-//     imageCont.append(img, qtyBtnsCont);
-
-//     let productDetailsCont = document.createElement("div");
-//     productDetailsCont.id = "cart__productDetailsCont";
-
-//     let tiltle = document.createElement("h1");
-//     tiltle.innerText = ele.title;
-
-//     let description = document.createElement("p");
-//     description.innerText = ele.description;
-
-//     let rating = document.createElement("p");
-//     rating.classList = "p1";
-//     rating.innerText = "Rating " + ele.rating;
-
-//     let price = document.createElement("h1");
-//     price.innerText = "INR " + ele.price;
-
-//     let remove = document.createElement("button");
-//     remove.classList = "span";
-//     remove.innerText = "REMOVE";
-
-    // remove.addEventListener("click", (e) => {
-    //    let filteredCart = cart.filter((element, i) => {
-    //     return ele.id != element.id;
-    //    });
-
-    //   localStorage.setItem("cart", JSON.stringify(filteredCart));       cart = JSON.parse(localStorage.getItem("cart"));
-    //    cartLength.innerText = cart.length;
-    //    itemscount.innerText = cart.length;
-    //    displayandShow(filteredCart);
-    //  });
-//     productDetailsCont.append(tiltle, description, rating, price, remove);
-//     cardMainCont.append(imageCont, productDetailsCont);
-//     cartpagedatamain.append(cardMainCont);
-
-//     // imageofcart.append(img,increasequantity,quantity,decreasequantity)
-//     //     detailofcartpoducts.append(tiltle,description,rating,price,remove)
-//     //     cartpagedatamain.append(imageofcart,detailofcartpoducts)
-//   });
-
-//   let totalpricesum = 0;
-//   for (let i = 0; i < cart.length; i++) {
-//     totalpricesum += cart[i].price * cart[i].qty;
-//   }
-//   totalprice.textContent = "₹ " + totalpricesum;
-// }
-  
+    let name = user;
+    let ordernumber = Math.trunc(Math.random()*99999);
+    let txnid = Math.trunc(Math.random()*99999999);
+    let status = "delivered";
+    let amount = totalOrder.textContent;
+    let items = t_i.textContent;
 
 
-  
+      let obj = {
+            "name" : name,
+            "ordernumber" : ordernumber,
+            "txnid" : txnid,
+            "status" : status,
+            "amount" : amount,
+            "items" :  items,
+      }
 
+      let orderdata = JSON.parse(localStorage.getItem("placedorders")) || [];
+      orderdata.push(obj);
+      alert("Order Placed Succesfully");
+      localStorage.setItem("dsw-cart") = "";
+    }
+    else{
+      alert("You need to login first")
+    }
 
-  
-  
-  
-
-
+  })

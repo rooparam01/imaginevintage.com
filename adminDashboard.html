@@ -94,32 +94,41 @@
   });
 
   //fetch Data from orders.json and local storage with key "placedorders"
-  fetch(`/orders.json`)
-    .then((res) => res.json())
-    .then((data) => {
-      let totalBalance = 0;
-      let countSales = 0;
-      //get data from local storage
-      let ordersData = JSON.parse(localStorage.getItem("placedorders")) || [];
-      //get users from local storage
-      let usersData = JSON.parse(localStorage.getItem("usersdata")) || [];
-      for (let i = 0; i < data.length; i++) {
-        ordersData.push(data[i]);
-      }
-      for (let i = 0; i < ordersData.length; i++) {
-        if (ordersData[i].status === "delivered") {
-          totalBalance += ordersData[i].amount;
-          countSales++;
+  let totalBalance = 0;
+  let countSales = 0;
+  let ordersData = JSON.parse(localStorage.getItem("placedorders")) || [];
+  if (ordersData.length == 0) {
+    fetch(`/orders.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        //
+
+        //get data from local storage
+
+        //get users from local storage
+        // let usersData = JSON.parse(localStorage.getItem("usersdata")) || [];
+        for (let i = 0; i < data.length; i++) {
+          ordersData.push(data[i]);
         }
-      }
-      console.log(data);
-      //Display data to the recent orders
-      DisplayData(ordersData);
-      //Display total sales
-      balancetotalEl.innerText = totalBalance;
-      salestotalEl.innerText = countSales;
-      usertotalEl.innerText = usersData.length;
-    });
+        localStorage.setItem("placedorders", JSON.stringify(ordersData));
+      });
+  }
+
+  let ordersD = JSON.parse(localStorage.getItem("placedorders")) || [];
+  for (let i = 0; i < ordersD.length; i++) {
+    if (ordersD[i].status === "delivered") {
+      totalBalance += ordersD[i].amount;
+      countSales++;
+    }
+  }
+
+  //Display data to the recent orders
+  DisplayData(ordersD);
+  //Display total sales
+  balancetotalEl.innerText = totalBalance;
+  salestotalEl.innerText = countSales;
+  usertotalEl.innerText = usersData.length;
+
   function DisplayData(arr) {
     let content = ``;
     for (let i = 0; i < arr.length; i++) {

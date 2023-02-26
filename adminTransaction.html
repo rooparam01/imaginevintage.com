@@ -78,7 +78,9 @@
   // let ProductsDatas = JSON.parse(localStorage.getItem("dsw-product")) || [];
 
   // DisplayData(ProductsDatas);
-
+  let ordersData = JSON.parse(localStorage.getItem("placedorders")) || [];
+  console.log(ordersData);
+  DisplayData(ordersData);
   function DisplayData(arr) {
     let content = ``;
     for (let i = 0; i < arr.length; i++) {
